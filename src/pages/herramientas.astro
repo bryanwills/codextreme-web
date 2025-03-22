@@ -7,7 +7,7 @@ import CategorySection from "@/components/SeccionCategorias.astro";
 import { languageList } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
 
-const currentLang = Astro.currentLocale || "en";
+const currentLang = Astro.currentLocale || "es";
 const translateLabels = useTranslations(
   currentLang as keyof typeof languageList
 );
@@ -43,6 +43,30 @@ const categories = [
         linkText: translateLabels("tools.download"),
         linkColor: "text-red-500",
       },
+      {
+        title: translateLabels("tools.tool7.name"),
+        description: translateLabels("tools.tool7.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://www.ccleaner.com/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-red-500",
+      },
+      {
+        title: translateLabels("tools.tool8.name"),
+        description: translateLabels("tools.tool8.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.medium_risk"), color: "yellow" },
+        ],
+        link: "https://www.wisecleaner.com/wise-disk-cleaner.html",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-red-500",
+      },
     ],
   },
   {
@@ -75,6 +99,29 @@ const categories = [
         linkText: translateLabels("tools.download"),
         linkColor: "text-purple-500",
       },
+      {
+        title: translateLabels("tools.tool9.name"),
+        description: translateLabels("tools.tool9.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://www.rainmeter.net/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-purple-500",
+      },
+      {
+        title: translateLabels("tools.tool10.name"),
+        description: translateLabels("tools.tool10.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#6B5B95" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://www.stardock.com/products/fences/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-purple-500",
+      },
     ],
   },
   {
@@ -87,7 +134,10 @@ const categories = [
         title: translateLabels("tools.tool5.name"),
         description: translateLabels("tools.tool5.description"),
         tags: [
-          { label: translateLabels("tools.tags.windows_all"), color: "#4CAF50" },
+          {
+            label: translateLabels("tools.tags.windows_all"),
+            color: "#4CAF50",
+          },
           { label: translateLabels("tools.tags.opensource"), color: "blue" },
         ],
         link: "https://www.bleachbit.org/",
@@ -102,6 +152,30 @@ const categories = [
           { label: translateLabels("tools.tags.medium_risk"), color: "yellow" },
         ],
         link: "https://www.oo-software.com/en/shutup10",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("tools.tool11.name"),
+        description: translateLabels("tools.tool11.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://www.malwarebytes.com/",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-green-500",
+      },
+      {
+        title: translateLabels("tools.tool12.name"),
+        description: translateLabels("tools.tool12.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#4CAF50" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.medium_risk"), color: "yellow" },
+        ],
+        link: "https://www.bitdefender.com/",
         linkText: translateLabels("tools.download"),
         linkColor: "text-green-500",
       },
@@ -133,8 +207,12 @@ const categories = [
   </div>
   <section class="py-12 mb-8 relative">
     <div class="max-w-3xl mx-auto">
-      <div class="bg-gradient-to-r from-[#2196F3]/90 to-[#9C27B0]/90 text-white mx-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-        <div class="container mx-auto px-6 py-5 text-center text-sm md:text-base">
+      <div
+        class="bg-gradient-to-r from-[#2196F3]/90 to-[#9C27B0]/90 text-white mx-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+      >
+        <div
+          class="container mx-auto px-6 py-5 text-center text-sm md:text-base"
+        >
           <p class="leading-relaxed">
             ⭐ <strong>{translateLabels("tools.opensource.title")}</strong>{" "}
             {translateLabels("tools.opensource.description")}
@@ -155,9 +233,7 @@ const categories = [
   <main class="bg-gradient-to-br from-[#1A1A1A] py-16 relative">
     <div class="container mx-auto px-4 mb-24">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {categories.map(category => (
-          <CategorySection {...category} />
-        ))}
+        {categories.map((category) => <CategorySection {...category} />)}
       </div>
     </div>
   </main>
