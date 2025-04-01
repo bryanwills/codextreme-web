@@ -69,7 +69,9 @@ This project is open source under the MIT license.
 ## Support and Contact
 Questions or suggestions?
 
-**CodeXtreme Team:** soporte@codeflow.dev
+[Discord Flow Project's](https://discord.gg/6weESehnXA)
+
+[CodeXtreme Team](soporte@codeflow.dev)
 
 **Twitter:** @CodeF1ow
 
