@@ -62,6 +62,14 @@ pnpm run dev
 ```bash
 pnpm run build
 ```
+## ⭐ Support the Project
+
+If you like this project, you can support it in the following ways:
+
+- **⭐ Star the Repository**: Give this project a star on GitHub to help others discover it
+- **☕ Buy me a Coffee**: Support development with a small donation via [PayPal](https://paypal.me/botarctic)
+
+Your support helps me continue creating awesome projects like this one! 🚀
 
 ## License
 This project is open source under the MIT license.
