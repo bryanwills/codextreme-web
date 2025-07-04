@@ -1,17 +1,16 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
-
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
   i18n: {
-    defaultLocale: 'en',
-    locales: ['es', 'en'],
-    routing:{
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    routing: {
       prefixDefaultLocale: false,
-    }
+    },
   },
 
-  output: 'static',
+  output: "static",
   integrations: [tailwind(), react()],
 });
