@@ -114,37 +114,6 @@ pnpm run build
 - `pnpm run start` - Alternative command to start development server
 - `pnpm run preview` - Preview production build locally (after build)
 
-## Deployment
-
-### Cloudflare Pages
-
-This project is optimized for deployment on Cloudflare Pages. Follow these steps:
-
-1. **Connect your repository** to Cloudflare Pages
-2. **Set build configurations:**
-   - Build command: `pnpm run build`
-   - Build output directory: `dist`
-   - Root directory: `/` (leave empty)
-
-3. **Set environment variables** in Cloudflare Pages dashboard:
-   ```
-   NODE_VERSION=20.18.0
-   ```
-
-4. **Build settings:**
-   - Framework preset: `Astro`
-   - Node.js version: `20.18.0` (set via NODE_VERSION env var)
-
-The `.nvmrc` file in the repository specifies Node.js v20.18.0 for consistent deployments.
-
-### Manual Build Verification
-
-You can test the build locally before deploying:
-
-```bash
-pnpm run build
-pnpm run preview
-```
 ## ⭐ Support the Project
 
 If you like this project, you can support it in the following ways:
