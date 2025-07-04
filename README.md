@@ -129,9 +129,9 @@ This project is open source under the MIT license.
 ## Support and Contact
 Questions or suggestions?
 
-[Discord Flow Project's](https://discord.gg/6weESehnXA)
+[Discord FireMoss](https://discord.gg/6weESehnXA)
 
-[CodeXtreme Team](soporte@codeflow.dev)
+[CodeXtreme Team](contact@kiridev.me)
 
 **Twitter:** @CodeF1ow
 
