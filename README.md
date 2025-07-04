@@ -32,35 +32,118 @@ Built-in support for light/dark mode
 🔍 **Advanced SEO**
 Dynamic meta tags and automated sitemap
 
+🌐 **Internationalization**
+Built-in support for multiple languages (English/Spanish)
+
+⚡ **Performance Optimized**
+Static site generation with optimal loading speeds
+
+🛠️ **Developer Experience**
+Hot reload, TypeScript support, and modern tooling
+
 ## Tech Stack
 
-- **Astro** v5.1.8 - Next-generation static framework
-- **Tailwind CSS** v3.3.3 - Modern CSS utilities
+- **Astro** v5.11.0 - Next-generation static framework
+- **React** v19.1.0 - UI library for interactive components
+- **Tailwind CSS** v3.4.0 - Modern CSS utilities framework
+- **TypeScript** - Type-safe development
+- **Heroicons** v2.2.0 - Beautiful hand-crafted SVG icons
+- **Prism.js** v1.30.0 - Syntax highlighting for code blocks
+- **Nanostores** v1.0.1 - State management solution
+
+### Additional Tools & Plugins
+
+- **@astrojs/tailwind** v6.0.2 - Astro integration for Tailwind CSS
+- **@astrojs/react** v4.3.0 - React integration for Astro
+- **@tailwindcss/forms** v0.5.10 - Form styling plugin
+- **@tailwindcss/typography** v0.5.16 - Typography plugin for rich content
+- **PostCSS** v8.5.6 - CSS processing tool
+- **Autoprefixer** v10.4.21 - CSS vendor prefixing
+
+## Project Architecture
+
+```
+src/
+├── components/          # Reusable Astro components
+├── i18n/               # Internationalization utilities
+├── layouts/            # Page layouts
+├── pages/              # Route pages (en/es)
+├── styles/             # Global styles and Tailwind CSS
+└── public/             # Static assets (images, icons)
+```
+
+### Key Configuration Files
+
+- `astro.config.mjs` - Astro configuration with React & Tailwind integrations
+- `tailwind.config.cjs` - Tailwind CSS configuration with custom theme
+- `postcss.config.cjs` - PostCSS configuration for CSS processing
+- `tsconfig.json` - TypeScript configuration
 
 ## Local Development
 
 Prerequisites:
-- Node.js v20+
-- pnpm v9+
+- **Node.js** v20.x or higher
+- **pnpm** v9.12.3 or higher
 
 Installation steps:
 
-1. Clone repository:
+1. **Clone repository:**
 ```bash
 git clone https://github.com/CodeF1ow/codextreme-web.git
 cd codextreme-web
 ```
-2. Install dependencies::
+
+2. **Install dependencies:**
 ```bash
 pnpm install
 ```
-3. Start development server:
+
+3. **Start development server:**
 ```bash
 pnpm run dev
 ```
-4. Build for production:
+The site will be available at `http://localhost:4321/`
+
+4. **Build for production:**
 ```bash
 pnpm run build
+```
+
+### Additional Commands
+
+- `pnpm run start` - Alternative command to start development server
+- `pnpm run preview` - Preview production build locally (after build)
+
+## Deployment
+
+### Cloudflare Pages
+
+This project is optimized for deployment on Cloudflare Pages. Follow these steps:
+
+1. **Connect your repository** to Cloudflare Pages
+2. **Set build configurations:**
+   - Build command: `pnpm run build`
+   - Build output directory: `dist`
+   - Root directory: `/` (leave empty)
+
+3. **Set environment variables** in Cloudflare Pages dashboard:
+   ```
+   NODE_VERSION=20.18.0
+   ```
+
+4. **Build settings:**
+   - Framework preset: `Astro`
+   - Node.js version: `20.18.0` (set via NODE_VERSION env var)
+
+The `.nvmrc` file in the repository specifies Node.js v20.18.0 for consistent deployments.
+
+### Manual Build Verification
+
+You can test the build locally before deploying:
+
+```bash
+pnpm run build
+pnpm run preview
 ```
 ## ⭐ Support the Project
 
