@@ -620,7 +620,7 @@ export const labels = {
     "downloads.version1.build_info": "Build 22H2 with Legacy support",
     "downloads.version2.name": "CodeXtremeOS 11",
     "downloads.version2.build_info":
-      "Build 23H2 with new features and optimizations",
+    "Build 23H2 with new features and optimizations",
     "downloads.version3.build_info": "Build 22H2 with extreme enhancements",
     "downloads.tags.x64_uefi": "x64 UEFI",
     "downloads.tags.stable": "Stable",
