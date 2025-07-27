@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.1",
     "@heroicons/react": "^2.2.0",
     "@nanostores/react": "^1.0.0",
     "@types/react": "^19.1.8",

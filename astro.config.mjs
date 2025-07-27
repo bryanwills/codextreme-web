@@ -1,8 +1,10 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  site: 'https://www.codextreme.me',
   i18n: {
     defaultLocale: "en",
     locales: ["es", "en"],
@@ -10,7 +12,18 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-
   output: "static",
-  integrations: [tailwind(), react()],
+  integrations: [
+    tailwind(),
+    react(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en',
+          es: 'es',
+        },
+      },
+    })
+  ],
 });
