@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { languageList } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
+import BackgroundSelectorCompact from "./BackgroundSelectorCompact.astro";
 
 const getPathWithoutLocale = (path: string): string => {
   const segments = path.split("/").filter(Boolean);
@@ -156,6 +157,9 @@ const navLinks = [
           </ul>
         </div>
       </div>
+
+      <!-- Selector de fondo compacto -->
+      <BackgroundSelectorCompact />
 
       <button
         id="theme-toggle"

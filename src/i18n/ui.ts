@@ -15,6 +15,14 @@ export const labels = {
     // =========== Tema =========== //
     "theme.toggle": "Cambiar Tema",
 
+    // =========== Selector de Fondos =========== //
+    "background.toggle": "Cambiar fondo",
+    "background.particles": "Partículas",
+    "background.crystal": "Cristales",
+    "background.nebula": "Nebulosa",
+    "background.none": "Sin efecto",
+    "background.notification": "Fondo cambiado a",
+
     // =========== Página Principal =========== //
     "download.button": "Descargar Ahora",
     "home.description": "🚀 Windows modificado para gaming y rendimiento",
@@ -367,6 +375,14 @@ export const labels = {
 
     // =========== Theme =========== //
     "theme.toggle": "Toggle Theme",
+
+    // =========== Background Selector =========== //
+    "background.toggle": "Change background",
+    "background.particles": "Particles",
+    "background.crystal": "Crystals",
+    "background.nebula": "Nebula",
+    "background.none": "No effect",
+    "background.notification": "Background changed to",
 
     // =========== Home Page =========== //
     "download.button": "Download Now",

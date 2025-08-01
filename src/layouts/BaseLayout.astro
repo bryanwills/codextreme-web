@@ -3,6 +3,7 @@ import "@/styles/tailwind.css";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import SeoMeta from "@/components/SeoMeta.astro";
+import AnimatedBackground from "@/components/AnimatedBackground.astro";
 import { languageList } from "@/i18n/ui";
 
 interface Props {
@@ -76,10 +77,13 @@ const currentLang = Astro.currentLocale || "en";
     </script>
   </head>
   <body
-    class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 pt-20 min-h-screen"
+    class="bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 pt-20 min-h-screen relative"
   >
+    <!-- Fondo animado -->
+    <AnimatedBackground type="particles" />
+    
     <Header />
-    <main class="min-h-[calc(100vh-8rem)]">
+    <main class="min-h-[calc(100vh-8rem)] relative z-10">
       <!-- Contenido -->
       <slot />
     </main>
