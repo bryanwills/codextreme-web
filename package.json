@@ -22,7 +22,7 @@
     "@nanostores/react": "^1.0.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "astro": "^5.12.3",
+    "astro": "^5.12.8",
     "nanostores": "^1.0.1",
     "prismjs": "1.30.0",
     "react": "^19.1.0",
