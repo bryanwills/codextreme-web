@@ -17,16 +17,16 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/sitemap": "^3.5.1",
     "@heroicons/react": "^2.2.0",
     "@nanostores/react": "^1.0.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "astro": "^5.13.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.8",
+    "astro": "^5.13.4",
     "nanostores": "^1.0.1",
     "prismjs": "1.30.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",
@@ -34,12 +34,13 @@
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.17"
   },
   "pnpm": {
     "overrides": {
       "path-to-regexp": ">=6.3.0",
-      "esbuild": ">=0.25.0"
+      "esbuild": ">=0.25.0",
+      "devalue": ">=5.3.2"
     }
   }
 }
