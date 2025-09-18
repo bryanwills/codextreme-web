@@ -5,7 +5,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "astro:i18n": ["./src/types/astro-i18n.d.ts"]
     }
   }
 }
