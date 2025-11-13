@@ -179,6 +179,9 @@ export const labels = {
       "Protección contra malware y amenazas avanzadas",
     "tools.tool12.name": "Bitdefender",
     "tools.tool12.description": "Antivirus con protección en tiempo real",
+    "tools.tool13.name": "Winhance",
+    "tools.tool13.description":
+      "Herramienta de optimización y personalización para Windows",
     "tools.tags.windows": "Windows 10/11",
     "tools.tags.windows11": "Windows 11",
     "tools.tags.windows_all": "Windows 7/8/10/11",
@@ -298,7 +301,9 @@ export const labels = {
     "downloads.version2.name": "CodeXtremeOS 11",
     "downloads.version2.build_info":
       "Build 23H2 con nuevas funciones y optimizaciones",
-    "downloads.version3.build_info": "Build 22H2 con mejoras extremas",
+    "downloads.version3.name": "CodeXtremeOS 11",
+    "downloads.version3.build_info":
+      "Build 25H2 optimizado con mejoras extremas",
     "downloads.tags.x64_uefi": "x64 UEFI",
     "downloads.tags.stable": "Estable",
     "downloads.tags.updated": "Actualizado",
@@ -339,6 +344,14 @@ export const labels = {
       "No tiene Apps UWP Pre-instaladas",
     "downloads.features.ms_store_installer_included":
       "Instalador de MS Store Incluido",
+    "downloads.features.iso_size_5gb": "5 GB ISO",
+    "downloads.features.all_bloatware_removed": "Todo el Bloatware Eliminado",
+    "downloads.features.winhance_installer":
+      "Instalador Winhance Incluido en el Escritorio",
+    "downloads.features.winhance_features":
+      "Con Winhance Instala MS Store, Edge y Aplicaciones Necesarias",
+    "downloads.features.system_optimizations_available":
+      "Optimizaciones del Sistema Disponibles a través de Winhance",
     "downloads.features.full_featured_updatable_build":
       "Versión Completa y Actualizable",
     "downloads.features.automatic_updates_paused_3000":
@@ -532,7 +545,9 @@ export const labels = {
     "tools.tool11.description":
       "Protection against malware and advanced threats",
     "tools.tool12.name": "Bitdefender",
-    "tools.tool12.description": "Antivirus with real-time protection",
+    "tools.tool12.description": "Antivirus with Real-time Protection",
+    "tools.tool13.name": "Winhance",
+    "tools.tool13.description": "Windows Optimization and Customization Tool",
     "tools.tags.windows": "Windows 10/11",
     "tools.tags.windows11": "Windows 11",
     "tools.tags.windows_all": "Windows 7/8/10/11",
@@ -636,8 +651,10 @@ export const labels = {
     "downloads.version1.build_info": "Build 22H2 with Legacy support",
     "downloads.version2.name": "CodeXtremeOS 11",
     "downloads.version2.build_info":
-    "Build 23H2 with new features and optimizations",
-    "downloads.version3.build_info": "Build 22H2 with extreme enhancements",
+      "Build 23H2 with new features and optimizations",
+    "downloads.version3.name": "CodeXtremeOS 11",
+    "downloads.version3.build_info":
+      "Build 25H2 optimized with extreme enhancements",
     "downloads.tags.x64_uefi": "x64 UEFI",
     "downloads.tags.stable": "Stable",
     "downloads.tags.updated": "Updated",
@@ -677,6 +694,14 @@ export const labels = {
     "downloads.features.no_preinstalled_uwp_apps": "No Pre-installed UWP Apps",
     "downloads.features.ms_store_installer_included":
       "MS Store Installer Included",
+    "downloads.features.iso_size_5gb": "5 GB ISO",
+    "downloads.features.all_bloatware_removed": "All Bloatware Removed",
+    "downloads.features.winhance_installer":
+      "Winhance Installer Included on Desktop",
+    "downloads.features.winhance_features":
+      "Install MS Store, Edge and Essential Applications via Winhance",
+    "downloads.features.system_optimizations_available":
+      "System Optimizations Available through Winhance",
     "downloads.features.full_featured_updatable_build":
       "Full and Updatable Version",
     "downloads.features.automatic_updates_paused_3000":

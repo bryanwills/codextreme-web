@@ -12,6 +12,47 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
 const latestVersions = [
   {
+    title: t("downloads.version3.name"),
+    buildInfo: t("downloads.version3.build_info"),
+    tags: [
+      {
+        label: t("downloads.tags.x64_uefi"),
+        bgColor: "blue-100",
+        textColor: "blue-800",
+      },
+      {
+        label: t("downloads.tags.stable"),
+        bgColor: "green-100",
+        textColor: "green-800",
+      },
+      {
+        label: `${t("downloads.tags.updated")}: 13-11-2025`,
+        bgColor: "blue-100",
+        textColor: "blue-800",
+      },
+    ],
+    features: [
+      t("downloads.features.iso_size_5gb"),
+      t("downloads.features.all_bloatware_removed"),
+      t("downloads.features.debloated_optimized"),
+      t("downloads.features.full_updatable_build"),
+      t("downloads.features.additional_language_support"),
+      t("downloads.features.optional_features_support"),
+      t("downloads.features.improvements_optimizations"),
+      t("downloads.features.no_preinstalled_uwp_apps"),
+      t("downloads.features.winhance_installer"),
+      t("downloads.features.winhance_features"),
+      t("downloads.features.system_optimizations_available"),
+      t("downloads.features_no_internet"),
+      t("downloads.features_telemetry"),
+    ],
+    link: "https://drive.google.com/file/d/1OCPT4e0-hTy3VjUyW-jXJgZzrlo68E_5/view?usp=sharing",
+    linkText: t("downloads.download_button"),
+    linkColor: "text-orange-500",
+    borderColor: "border-orange-500",
+    textColor: "text-orange-500",
+  },
+  {
     title: t("downloads.latest_version.name"),
     buildInfo: t("downloads.latest_version.build_info"),
     tags: [

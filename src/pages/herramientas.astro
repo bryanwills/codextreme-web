@@ -20,6 +20,18 @@ const categories = [
     gradientTo: "#FF8C78",
     tools: [
       {
+        title: translateLabels("tools.tool13.name"),
+        description: translateLabels("tools.tool13.description"),
+        tags: [
+          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
+          { label: translateLabels("tools.tags.opensource"), color: "blue" },
+          { label: translateLabels("tools.tags.low_risk"), color: "green" },
+        ],
+        link: "https://github.com/memstechtips/Winhance/releases/download/v25.11.12/Winhance.Installer.exe",
+        linkText: translateLabels("tools.download"),
+        linkColor: "text-red-500",
+      },
+      {
         title: translateLabels("tools.tool1.name"),
         description: translateLabels("tools.tool1.description"),
         tags: [
@@ -40,18 +52,6 @@ const categories = [
           { label: translateLabels("tools.tags.low_risk"), color: "green" },
         ],
         link: "https://github.com/microsoft/PowerToys",
-        linkText: translateLabels("tools.download"),
-        linkColor: "text-red-500",
-      },
-      {
-        title: translateLabels("tools.tool7.name"),
-        description: translateLabels("tools.tool7.description"),
-        tags: [
-          { label: translateLabels("tools.tags.windows"), color: "#FF6F61" },
-          { label: translateLabels("tools.tags.opensource"), color: "blue" },
-          { label: translateLabels("tools.tags.low_risk"), color: "green" },
-        ],
-        link: "https://www.ccleaner.com/",
         linkText: translateLabels("tools.download"),
         linkColor: "text-red-500",
       },
