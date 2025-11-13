@@ -4,7 +4,7 @@
 [![Astro](https://img.shields.io/badge/-Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
-Official **CodeXtreme** website - Informative web created by **CodeFlow**. Open source project built with Astro and Tailwind CSS for maximum efficiency and performance.
+Official **CodeXtreme** website - Informative web created by **Kiri86**. Open source project built with Astro and Tailwind CSS for maximum efficiency and performance.
 
 [![Desktop](https://i.imgur.com/SJDw4y1.png)](https://www.codextreme.me)
 
@@ -82,29 +82,35 @@ src/
 ## Local Development
 
 Prerequisites:
+
 - **Node.js** v20.x or higher
 - **pnpm** v9.12.3 or higher
 
 Installation steps:
 
 1. **Clone repository:**
+
 ```bash
 git clone https://github.com/CodeF1ow/codextreme-web.git
 cd codextreme-web
 ```
 
 2. **Install dependencies:**
+
 ```bash
 pnpm install
 ```
 
 3. **Start development server:**
+
 ```bash
 pnpm run dev
 ```
+
 The site will be available at `http://localhost:4321/`
 
 4. **Build for production:**
+
 ```bash
 pnpm run build
 ```
@@ -124,9 +130,11 @@ If you like this project, you can support it in the following ways:
 Your support helps me continue creating awesome projects like this one! 🚀
 
 ## License
+
 This project is open source under the MIT license.
 
 ## Support and Contact
+
 Questions or suggestions?
 
 [Discord FireMoss](https://discord.gg/6weESehnXA)

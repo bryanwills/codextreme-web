@@ -31,7 +31,7 @@ export const labels = {
     "home.desopti":
       "ISO modificada de solo 3.2 GB con máximo rendimiento para gaming y productividad.",
     "home.dev.des":
-      "Creada por CodeFlow con meses de pruebas y optimizaciones para un rendimiento extremo.",
+      "Creada por Kiri86 con meses de pruebas y optimizaciones para un rendimiento extremo.",
     "home.safety": "Seguridad Garantizada",
     "home.safe.des":
       "Con las últimas actualizaciones de seguridad y protección contra malware.",
@@ -83,7 +83,7 @@ export const labels = {
     "footer.newsletter":
       "Recibe noticias sobre nuevas versiones y características",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 CodeFlow. Todos los derechos reservados.",
+    "footer.copyright": "© 2025 Kiri86. Todos los derechos reservados.",
     "footer.privacy": "Privacidad",
     "footer.terms": "Términos",
     "footer.github.title": "Proyecto CodeXtreme ",
@@ -91,12 +91,12 @@ export const labels = {
     "footer.github.star": "Estrella en GitHub",
 
     // =========== Accesibilidad =========== //
-    "aria.social.twitter": "Enlace a Twitter de CodeFlow",
-    "aria.social.github": "Enlace a GitHub de CodeFlow",
-    "aria.social.youtube": "Enlace a YouTube de CodeFlow",
-    "aria.social.discord": "Enlace a Discord de CodeFlow",
-    "aria.social.linkedin": "Enlace a LinkedIn de CodeFlow",
-    "aria.social.reddit": "Enlace a Reddit de CodeFlow",
+    "aria.social.twitter": "Enlace a Twitter de Kiri86",
+    "aria.social.github": "Enlace a GitHub de Kiri86",
+    "aria.social.youtube": "Enlace a YouTube de Kiri86",
+    "aria.social.discord": "Enlace a Discord de Kiri86",
+    "aria.social.linkedin": "Enlace a LinkedIn de Kiri86",
+    "aria.social.reddit": "Enlace a Reddit de Kiri86",
 
     // =========== Guías =========== //
     "guides.title": "Guías CodeXtremeOS",
@@ -405,7 +405,7 @@ export const labels = {
     "home.desopti":
       "Modified ISO of only 3.2 GB with maximum performance for gaming and productivity.",
     "home.dev.des":
-      "Created by CodeFlow with months of testing and optimizations for extreme performance.",
+      "Created by Kiri86 with months of testing and optimizations for extreme performance.",
     "home.safety": "Guaranteed Security",
     "home.safe.des": "With the latest security updates and malware protection.",
     "home.xbox": "Xbox Live",
@@ -453,7 +453,7 @@ export const labels = {
     "footer.subscribe": "Subscribe",
     "footer.newsletter": "Receive news about new versions and features",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 CodeFlow. All rights reserved.",
+    "footer.copyright": "© 2025 Kiri86. All rights reserved.",
     "footer.privacy": "Privacy",
     "footer.terms": "Terms",
     "footer.github.title": "Project CodeXtreme",
@@ -461,12 +461,12 @@ export const labels = {
     "footer.github.star": "Star on GitHub",
 
     // =========== Accessibility =========== //
-    "aria.social.twitter": "Link to CodeFlow's Twitter",
-    "aria.social.github": "Link to CodeFlow's GitHub",
-    "aria.social.youtube": "Link to CodeFlow's YouTube",
-    "aria.social.discord": "Link to CodeFlow's Discord",
-    "aria.social.linkedin": "Link to CodeFlow's LinkedIn",
-    "aria.social.reddit": "Link to CodeFlow's Reddit",
+    "aria.social.twitter": "Link to Kiri86 Twitter",
+    "aria.social.github": "Link to Kiri86 GitHub",
+    "aria.social.youtube": "Link to Kiri86 YouTube",
+    "aria.social.discord": "Link to Kiri86 Discord",
+    "aria.social.linkedin": "Link to Kiri86 LinkedIn",
+    "aria.social.reddit": "Link to Kiri86 Reddit",
 
     // =========== Guides ===========  //
     "guides.title": "CodeXtremeOS Guides",
