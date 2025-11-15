@@ -31,7 +31,7 @@ export const labels = {
     "home.desopti":
       "ISO modificada de solo 3.2 GB con máximo rendimiento para gaming y productividad.",
     "home.dev.des":
-      "Creada por Kiri86 con meses de pruebas y optimizaciones para un rendimiento extremo.",
+      "Creada por Oscar con meses de pruebas y optimizaciones para un rendimiento extremo.",
     "home.safety": "Seguridad Garantizada",
     "home.safe.des":
       "Con las últimas actualizaciones de seguridad y protección contra malware.",
@@ -83,7 +83,7 @@ export const labels = {
     "footer.newsletter":
       "Recibe noticias sobre nuevas versiones y características",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 Kiri86. Todos los derechos reservados.",
+    "footer.copyright": "© 2025 Oscar. Todos los derechos reservados.",
     "footer.privacy": "Privacidad",
     "footer.terms": "Términos",
     "footer.github.title": "Proyecto CodeXtreme ",
@@ -91,12 +91,12 @@ export const labels = {
     "footer.github.star": "Estrella en GitHub",
 
     // =========== Accesibilidad =========== //
-    "aria.social.twitter": "Enlace a Twitter de Kiri86",
-    "aria.social.github": "Enlace a GitHub de Kiri86",
-    "aria.social.youtube": "Enlace a YouTube de Kiri86",
-    "aria.social.discord": "Enlace a Discord de Kiri86",
-    "aria.social.linkedin": "Enlace a LinkedIn de Kiri86",
-    "aria.social.reddit": "Enlace a Reddit de Kiri86",
+    "aria.social.twitter": "Enlace a Twitter de Oscar",
+    "aria.social.github": "Enlace a GitHub de Oscar",
+    "aria.social.youtube": "Enlace a YouTube de Oscar",
+    "aria.social.discord": "Enlace a Discord de Oscar",
+    "aria.social.linkedin": "Enlace a LinkedIn de Oscar",
+    "aria.social.reddit": "Enlace a Reddit de Oscar",
 
     // =========== Guías =========== //
     "guides.title": "Guías CodeXtremeOS",
@@ -352,6 +352,12 @@ export const labels = {
       "Con Winhance Instala MS Store, Edge y Aplicaciones Necesarias",
     "downloads.features.system_optimizations_available":
       "Optimizaciones del Sistema Disponibles a través de Winhance",
+    "downloads.features.winutil_installer":
+      "Instalador WinUtil de Chris Titus Incluido en el Escritorio",
+    "downloads.features.winutil_features":
+      "Con WinUtil Instala MS Store, Edge y Aplicaciones Necesarias",
+    "downloads.features.winutil_optimizations":
+      "Optimizaciones del Sistema Disponibles a través de WinUtil",
     "downloads.features.full_featured_updatable_build":
       "Versión Completa y Actualizable",
     "downloads.features.automatic_updates_paused_3000":
@@ -405,7 +411,7 @@ export const labels = {
     "home.desopti":
       "Modified ISO of only 3.2 GB with maximum performance for gaming and productivity.",
     "home.dev.des":
-      "Created by Kiri86 with months of testing and optimizations for extreme performance.",
+      "Created by Oscar with months of testing and optimizations for extreme performance.",
     "home.safety": "Guaranteed Security",
     "home.safe.des": "With the latest security updates and malware protection.",
     "home.xbox": "Xbox Live",
@@ -453,7 +459,7 @@ export const labels = {
     "footer.subscribe": "Subscribe",
     "footer.newsletter": "Receive news about new versions and features",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 Kiri86. All rights reserved.",
+    "footer.copyright": "© 2025 Oscar. All rights reserved.",
     "footer.privacy": "Privacy",
     "footer.terms": "Terms",
     "footer.github.title": "Project CodeXtreme",
@@ -461,12 +467,12 @@ export const labels = {
     "footer.github.star": "Star on GitHub",
 
     // =========== Accessibility =========== //
-    "aria.social.twitter": "Link to Kiri86 Twitter",
-    "aria.social.github": "Link to Kiri86 GitHub",
-    "aria.social.youtube": "Link to Kiri86 YouTube",
-    "aria.social.discord": "Link to Kiri86 Discord",
-    "aria.social.linkedin": "Link to Kiri86 LinkedIn",
-    "aria.social.reddit": "Link to Kiri86 Reddit",
+    "aria.social.twitter": "Link to Oscar Twitter",
+    "aria.social.github": "Link to Oscar GitHub",
+    "aria.social.youtube": "Link to Oscar YouTube",
+    "aria.social.discord": "Link to Oscar Discord",
+    "aria.social.linkedin": "Link to Oscar LinkedIn",
+    "aria.social.reddit": "Link to Oscar Reddit",
 
     // =========== Guides ===========  //
     "guides.title": "CodeXtremeOS Guides",
@@ -702,6 +708,12 @@ export const labels = {
       "Install MS Store, Edge and Essential Applications via Winhance",
     "downloads.features.system_optimizations_available":
       "System Optimizations Available through Winhance",
+    "downloads.features.winutil_installer":
+      "Chris Titus WinUtil Installer Included",
+    "downloads.features.winutil_features":
+      "Install and Configure Essential Applications via WinUtil",
+    "downloads.features.winutil_optimizations":
+      "System Optimizations Available through WinUtil",
     "downloads.features.full_featured_updatable_build":
       "Full and Updatable Version",
     "downloads.features.automatic_updates_paused_3000":

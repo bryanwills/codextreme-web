@@ -6,7 +6,10 @@ import BackgroundSelectorCompact from "./BackgroundSelectorCompact.astro";
 
 const getPathWithoutLocale = (path: string): string => {
   const segments = path.split("/").filter(Boolean);
-  return segments.slice(1).join("/") || "/";
+  // Check if the first segment is a locale code
+  const isLocaleSegment = ["en", "es"].includes(segments[0]);
+  const pathWithoutLocale = isLocaleSegment ? segments.slice(1).join("/") : segments.join("/");
+  return pathWithoutLocale || "/";
 };
 
 const currentPathWithoutLocale = getPathWithoutLocale(Astro.url.pathname);
