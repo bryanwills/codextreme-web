@@ -11,6 +11,7 @@ export const labels = {
     "nav.tools": "Herramientas",
     "nav.software": "Software",
     "nav.download": "Descargas",
+    "nav.optimizer": "Win Optimizer",
 
     // =========== Tema =========== //
     "theme.toggle": "Cambiar Tema",
@@ -382,7 +383,23 @@ export const labels = {
       "No requiere conexión a Internet para la instalación",
     "downloads.features_telemetry": "Telemetría y Rastreo Eliminados",
     "downloads.features.additional_improvements_optimizations":
-      "Mejoras y Optimización Adicionales Incluidas",
+      "Mejoras y Optimización Adicional Incluidas",
+
+    // =========== Win Optimizer =========== //
+    "optimizer.title": "Win Optimizer",
+    "optimizer.hero_description": "Optimización avanzada del sistema Windows",
+    "optimizer.sections.network": "Red",
+    "optimizer.sections.memory": "Memoria",
+    "optimizer.sections.gpu": "GPU",
+    "optimizer.sections.windows_features": "Características de Windows",
+    "optimizer.sections.firewall_security": "Firewall y Seguridad",
+    "optimizer.sections.nagle_algorithm": "Algoritmo de Nagle",
+    "optimizer.sections.network_throttling": "Network Throttling",
+    "optimizer.sections.system_responsiveness": "System Responsiveness",
+    "optimizer.sections.latency_timers": "Latencia y Timers",
+    "optimizer.explore":
+      "Explora todos los tweaks y optimizaciones disponibles",
+    "optimizer.view_more": "Ver más",
   },
   en: {
     // =========== Navigation =========== //
@@ -391,6 +408,7 @@ export const labels = {
     "nav.tools": "Tools",
     "nav.software": "Software",
     "nav.download": "Downloads",
+    "nav.optimizer": "Win Optimizer",
 
     // =========== Theme =========== //
     "theme.toggle": "Toggle Theme",
@@ -739,5 +757,20 @@ export const labels = {
     "downloads.features_telemetry": "Telemetry and Tracking Removed",
     "downloads.features.additional_improvements_optimizations":
       "Additional Improvements and Optimizations Included",
+
+    // =========== Win Optimizer =========== //
+    "optimizer.title": "Win Optimizer",
+    "optimizer.hero_description": "Advanced Windows system optimization",
+    "optimizer.sections.network": "Network",
+    "optimizer.sections.memory": "Memory",
+    "optimizer.sections.gpu": "GPU",
+    "optimizer.sections.windows_features": "Windows Features",
+    "optimizer.sections.firewall_security": "Firewall and Security",
+    "optimizer.sections.nagle_algorithm": "Nagle Algorithm",
+    "optimizer.sections.network_throttling": "Network Throttling",
+    "optimizer.sections.system_responsiveness": "System Responsiveness",
+    "optimizer.sections.latency_timers": "Latency and Timers",
+    "optimizer.explore": "Explore all available tweaks and optimizations",
+    "optimizer.view_more": "View More",
   },
 };
