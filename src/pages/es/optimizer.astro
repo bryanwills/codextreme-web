@@ -1,162 +1,88 @@
 ---
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import { languageList } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
+import {
+  TWEAK_CATEGORIES,
+  CATEGORY_ICONS,
+  CATEGORY_COLORS,
+} from "@/data/tweakCategories";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
-
-const tweakCategories = [
-  {
-    id: "network",
-    title: t("optimizer.sections.network"),
-    color: "from-slate-600 to-slate-800",
-    textColor: "from-slate-700 to-slate-900",
-    icon: "🌐",
-  },
-  {
-    id: "memory",
-    title: t("optimizer.sections.memory"),
-    color: "from-purple-400 to-purple-600",
-    textColor: "from-purple-500 to-purple-700",
-    icon: "🧠",
-  },
-  {
-    id: "gpu",
-    title: t("optimizer.sections.gpu"),
-    color: "from-green-400 to-green-600",
-    textColor: "from-green-500 to-green-700",
-    icon: "🎮",
-  },
-  {
-    id: "windows_features",
-    title: t("optimizer.sections.windows_features"),
-    color: "from-cyan-400 to-cyan-600",
-    textColor: "from-cyan-500 to-cyan-700",
-    icon: "⚙️",
-  },
-  {
-    id: "firewall_security",
-    title: t("optimizer.sections.firewall_security"),
-    color: "from-red-400 to-red-600",
-    textColor: "from-red-500 to-red-700",
-    icon: "🛡️",
-  },
-  {
-    id: "nagle_algorithm",
-    title: t("optimizer.sections.nagle_algorithm"),
-    color: "from-orange-400 to-orange-600",
-    textColor: "from-orange-500 to-orange-700",
-    icon: "🔧",
-  },
-  {
-    id: "network_throttling",
-    title: t("optimizer.sections.network_throttling"),
-    color: "from-pink-400 to-pink-600",
-    textColor: "from-pink-500 to-pink-700",
-    icon: "📊",
-  },
-  {
-    id: "system_responsiveness",
-    title: t("optimizer.sections.system_responsiveness"),
-    color: "from-indigo-400 to-indigo-600",
-    textColor: "from-indigo-500 to-indigo-700",
-    icon: "⚡",
-  },
-  {
-    id: "latency_timers",
-    title: t("optimizer.sections.latency_timers"),
-    color: "from-yellow-400 to-yellow-600",
-    textColor: "from-yellow-500 to-yellow-700",
-    icon: "⏱️",
-  },
-];
 ---
 
 <BaseLayout title={t("optimizer.title") + " - CodeXtremeOS"}>
   <!-- Hero Section -->
-  <section
-    class="relative bg-gradient-to-br from-[#1A1A1A] text-white py-24 overflow-hidden"
-  >
-    <div class="container mx-auto text-center px-4 relative z-10">
-      <div class="max-w-3xl mx-auto">
-        <h1
-          class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]"
-        >
-          <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]"
-          >
+  <section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden bg-white dark:bg-[#0a0a0a]">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/5 via-purple-900/5 to-white dark:from-blue-900/20 dark:via-purple-900/10 dark:to-[#0a0a0a]"></div>
+      <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
+    </div>
+
+    <div class="container mx-auto text-center px-4 relative z-10 pt-20">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 drop-shadow-2xl">
             {t("optimizer.title")}
           </span>
         </h1>
-        <p
-          class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
-        >
+        <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed backdrop-blur-sm bg-white/50 dark:bg-white/5 p-6 rounded-2xl border border-gray-200 dark:border-white/10">
           {t("optimizer.hero_description")}
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Sección Principal -->
-  <main
-    class="bg-gradient-to-br from-[#F4F4F4] to-[#eaeaea] dark:from-[#1A1A1A] py-16 relative"
-  >
-    <h2 class="text-3xl font-bold text-center mb-12">
-      <span
-        class="bg-clip-text text-transparent bg-gradient-to-r from-[#FF6F61] to-[#6B5B95]"
-      >
-        {t("optimizer.title")}
-      </span>
-    </h2>
-
+  <!-- Main Section -->
+  <main class="bg-white dark:bg-[#0a0a0a] min-h-screen py-12 relative">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
-          tweakCategories.map((category) => (
-            <div
-              id={category.id}
-              class="group relative bg-white dark:bg-[#2A2A2A] p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700 cursor-pointer"
-            >
-              <!-- Overlay de efecto al hacer hover -->
-              <div class="absolute inset-0 bg-gradient-to-r from-current/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl -z-10"></div>
+          TWEAK_CATEGORIES.map((category) => {
+            const colors = CATEGORY_COLORS[category];
+            const icon = CATEGORY_ICONS[category];
+            const title = t(`optimizer.sections.${category}` as any);
 
-              <div class={`border-l-4 border-gray-400 pl-6`}>
-                <h3 class="text-2xl font-bold mb-3">
-                  <span class={`bg-clip-text text-transparent bg-gradient-to-r ${category.textColor}`}>
-                    <span class="mr-2">{category.icon}</span>
-                    {category.title}
-                  </span>
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-300">
-                  {t("optimizer.explore")}
-                </p>
-                <a
-                  href={`/es/optimizer/${category.id}`}
-                  class={`inline-flex items-center bg-gradient-to-r ${category.textColor} text-white font-medium text-sm mt-4 px-4 py-2 rounded-lg hover:opacity-80 transition-opacity`}
-                >
-                  {t("optimizer.view_more")}
-                  <svg
-                    class="w-5 h-5 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          ))
+            return (
+              <a
+                href={`/optimizer/${category}`}
+                class="group relative bg-white dark:bg-[#1A1A1A] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
+              >
+                <!-- Glow Effect -->
+                <div class={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br ${colors.color} blur-xl -z-10`}></div>
+
+                <div class="p-6 relative z-10 h-full flex flex-col">
+                  <div class="flex items-center justify-between mb-4">
+                    <div class={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-gradient-to-br ${colors.color} shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                      {icon}
+                    </div>
+                    <div class={`w-8 h-8 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-400 dark:text-white/50 group-hover:bg-gray-900 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black group-hover:scale-110 transition-all duration-300`}>
+                      →
+                    </div>
+                  </div>
+
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-200 transition-colors">
+                    {title}
+                  </h3>
+
+                  <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed mb-4 flex-grow line-clamp-2">
+                    {t("optimizer.explore")}
+                  </p>
+
+                  <div class="flex items-center gap-2 text-[10px] font-medium text-gray-500 dark:text-white/50 group-hover:text-gray-800 dark:group-hover:text-white/80 uppercase tracking-wider">
+                    <span class={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${colors.textColor}`}></span>
+                    Configure
+                  </div>
+                </div>
+              </a>
+            );
+          })
         }
       </div>
     </div>
   </main>
-
 </BaseLayout>
