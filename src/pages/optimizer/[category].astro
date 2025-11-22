@@ -67,28 +67,42 @@ const categoryTitle = t(`optimizer.sections.${category}` as any);
 <BaseLayout title={`${categoryTitle} - ${t("optimizer.title")} - CodeXtremeOS`}>
   <!-- Hero Section -->
   <section
-    class="relative bg-gradient-to-br from-[#1A1A1A] text-white py-24 overflow-hidden"
+    class="relative min-h-[40vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
   >
-    <div class="container mx-auto text-center px-4 relative z-10">
-      <div class="max-w-3xl mx-auto">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+      <div
+        class={`absolute inset-0 bg-gradient-to-br ${categoryColors_current.color} opacity-20`}
+      >
+      </div>
+      <div class="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent"
+      >
+      </div>
+    </div>
+
+    <div class="container mx-auto text-center px-4 relative z-10 pt-20">
+      <div class="max-w-4xl mx-auto">
         <a
           href="/optimizer"
-          class="text-blue-400 hover:text-blue-300 mb-4 inline-block"
+          class="group inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/10 backdrop-blur-sm"
         >
-          ← {t("optimizer.title")}
+          <span class="group-hover:-translate-x-1 transition-transform">←</span>
+          {t("optimizer.title")}
         </a>
-        <h1
-          class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in [text-shadow:_0_4px_12px_rgb(0_0_0_/_30%)]"
-        >
+
+        <h1 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
           <span
-            class={`bg-clip-text text-transparent bg-gradient-to-r ${categoryColors_current.textColor}`}
+            class={`bg-clip-text text-transparent bg-gradient-to-r ${categoryColors_current.textColor} drop-shadow-2xl`}
           >
-            <span class="mr-2">{categoryIcon}</span>
             {categoryTitle}
           </span>
         </h1>
+
         <p
-          class="text-xl md:text-2xl mb-8 animate-fade-in delay-150 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full inline-block"
+          class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
         >
           {t("optimizer.hero_description")}
         </p>
@@ -96,10 +110,13 @@ const categoryTitle = t(`optimizer.sections.${category}` as any);
     </div>
   </section>
 
-  <!-- Sección Principal -->
-  <main
-    class="bg-gradient-to-br from-[#F4F4F4] to-[#eaeaea] dark:from-[#1A1A1A] py-16 relative"
-  >
+  <!-- Main Section -->
+  <main class="bg-[#0a0a0a] min-h-screen py-12 relative">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"
+    >
+    </div>
+
     <div class="container mx-auto px-4">
       {
         tweaks ? (
@@ -111,10 +128,17 @@ const categoryTitle = t(`optimizer.sections.${category}` as any);
             textColor={categoryColors_current.textColor}
           />
         ) : (
-          <div class="bg-yellow-100 dark:bg-yellow-900 border border-yellow-400 dark:border-yellow-600 rounded-lg p-6 text-center">
-            <p class="text-yellow-800 dark:text-yellow-200">
-              Content for {categoryTitle} coming soon...
-            </p>
+          <div class="max-w-2xl mx-auto mt-12">
+            <div class="bg-yellow-500/5 border border-yellow-500/20 rounded-2xl p-12 text-center backdrop-blur-sm">
+              <span class="text-4xl mb-4 block">🚧</span>
+              <h3 class="text-xl font-bold text-yellow-200 mb-2">
+                Work in Progress
+              </h3>
+              <p class="text-yellow-200/60">
+                Content for {categoryTitle} is currently being optimized. Check
+                back soon!
+              </p>
+            </div>
           </div>
         )
       }

@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: 'https://www.codextreme.me',
+  site: "https://www.codextreme.me",
   i18n: {
     defaultLocale: "en",
     locales: ["es", "en"],
@@ -18,12 +18,12 @@ export default defineConfig({
     react(),
     sitemap({
       i18n: {
-        defaultLocale: 'en',
+        defaultLocale: "en",
         locales: {
-          en: 'en',
-          es: 'es',
+          en: "en",
+          es: "es",
         },
       },
-    })
+    }),
   ],
 });

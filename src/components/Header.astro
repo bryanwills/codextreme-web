@@ -2,7 +2,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { languageList } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
-import BackgroundSelectorCompact from "./BackgroundSelectorCompact.astro";
 
 const getPathWithoutLocale = (path: string): string => {
   const segments = path.split("/").filter(Boolean);
@@ -85,7 +84,7 @@ const navLinks = [
 ---
 
 <header
-  class="bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 border-b border-gray-200 dark:border-gray-700 backdrop-blur-sm fixed w-full top-0 z-50 animate-slideInRight"
+  class="bg-white/80 dark:bg-[#1A1A1A]/80 border-b border-gray-200 dark:border-white/5 backdrop-blur-md fixed w-full top-0 z-50 animate-slideInRight"
 >
   <div class="container mx-auto flex justify-between items-center px-4 py-3">
     <a
@@ -139,18 +138,31 @@ const navLinks = [
 
       <div class="relative group">
         <button
-          class="p-2 rounded-lg bg-gradient-to-br from-[#FF6F61] to-[#6B5B95] hover:from-[#FF8C78] hover:to-[#8B7CB0] transition-all duration-300 flex items-center shadow-md hover:shadow-lg"
+          class="p-2 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 flex items-center gap-2 group-hover:border-gray-300 dark:group-hover:border-white/20"
           aria-label="Cambiar idioma"
         >
-          <span class="text-sm font-medium uppercase text-white"
+          <span
+            class="text-sm font-medium uppercase text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
             >{currentLang}</span
           >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
         </button>
 
         <div
-          class="absolute right-0 top-full mt-2 w-32 bg-white dark:bg-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700"
+          class="absolute right-0 top-full mt-2 w-32 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/10 rounded-xl shadow-xl backdrop-blur-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden z-50"
         >
-          <ul class="py-2">
+          <ul class="py-1">
             {
               Object.entries(languageList).map(
                 ([langCode, langName]) =>
@@ -161,7 +173,7 @@ const navLinks = [
                           langCode as any,
                           currentPathWithoutLocale
                         )}
-                        class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors tex-black text-black dark:text-white"
+                        class="block px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
                       >
                         {langName}
                       </a>
@@ -173,32 +185,25 @@ const navLinks = [
         </div>
       </div>
 
-      <!-- Selector de fondo compacto -->
-      <BackgroundSelectorCompact />
-
       <button
         id="theme-toggle"
-        class="p-2 rounded-lg bg-gradient-to-br from-[#FF6F61] to-[#6B5B95] hover:from-[#FF8C78] hover:to-[#8B7CB0] transition-all duration-300 relative group shadow-md hover:shadow-lg"
+        class="p-2 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 relative group hover:border-gray-300 dark:hover:border-white/20"
         aria-label="Cambiar tema"
       >
         <div class="flex items-center justify-center w-6 h-6">
           <span
             id="theme-icon"
-            class="text-lg transition-transform duration-300">🌙</span
+            class="text-lg transition-transform duration-300 group-hover:scale-110"
+            >🌙</span
           >
         </div>
-        <span
-          class="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md"
-        >
-          {translateLabels("theme.toggle")}
-        </span>
       </button>
     </div>
   </div>
 
   <div
     id="mobile-menu"
-    class="hidden md:hidden fixed top-16 left-0 w-full bg-inherit border-b border-gray-200 dark:border-gray-700 backdrop-blur-sm shadow-lg animate-slideInRight"
+    class="hidden md:hidden fixed top-16 left-0 w-full bg-white/95 dark:bg-[#1A1A1A]/95 border-b border-gray-200 dark:border-white/5 backdrop-blur-md shadow-lg animate-slideInRight"
   >
     <div class="container mx-auto px-4 py-4">
       <ul class="flex flex-row flex-wrap gap-4 justify-center">

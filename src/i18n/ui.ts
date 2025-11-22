@@ -99,6 +99,28 @@ export const labels = {
     "aria.social.linkedin": "Enlace a LinkedIn de Oscar",
     "aria.social.reddit": "Enlace a Reddit de Oscar",
 
+    // =========== Barra de Accesibilidad =========== //
+    "accessibility.title": "Herramientas de Accesibilidad",
+    "accessibility.increase_text": "Aumentar texto",
+    "accessibility.decrease_text": "Disminuir texto",
+    "accessibility.grayscale": "Escala de grises",
+    "accessibility.high_contrast": "Alto contraste",
+    "accessibility.negative_contrast": "Contraste negativo",
+    "accessibility.underline_links": "Subrayar enlaces",
+    "accessibility.readable_font": "Fuente legible",
+    "accessibility.reset": "Restablecer",
+    "accessibility.current_size": "Tamaño actual",
+
+    // =========== Cookies =========== //
+    "cookies.title": "USAMOS COOKIES",
+    "cookies.message":
+      "Utilizamos cookies propias y de terceros para mejorar tu experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Puedes aceptar todas las cookies, rechazarlas o personalizar tus preferencias.",
+    "cookies.more_info": "Más información",
+    "cookies.accept_all": "Aceptar todas",
+    "cookies.reject_all": "Rechazar todas",
+    "cookies.customize": "Personalizar",
+    "cookies.privacy_policy": "Política de Privacidad",
+
     // =========== Guías =========== //
     "guides.title": "Guías CodeXtremeOS",
     "guides.description":
@@ -492,8 +514,30 @@ export const labels = {
     "aria.social.linkedin": "Link to Oscar LinkedIn",
     "aria.social.reddit": "Link to Oscar Reddit",
 
+    // =========== Accessibility Toolbar =========== //
+    "accessibility.title": "Accessibility Tools",
+    "accessibility.increase_text": "Increase text",
+    "accessibility.decrease_text": "Decrease text",
+    "accessibility.grayscale": "Grayscale",
+    "accessibility.high_contrast": "High contrast",
+    "accessibility.negative_contrast": "Negative contrast",
+    "accessibility.underline_links": "Underline links",
+    "accessibility.readable_font": "Readable font",
+    "accessibility.reset": "Reset",
+    "accessibility.current_size": "Current size",
+
+    // =========== Cookies =========== //
+    "cookies.title": "WE USE COOKIES",
+    "cookies.message":
+      "We use our own and third-party cookies to improve your browsing experience, analyze site traffic, and personalize content. You can accept all cookies, reject them, or customize your preferences.",
+    "cookies.more_info": "More information",
+    "cookies.accept_all": "Accept all",
+    "cookies.reject_all": "Reject all",
+    "cookies.customize": "Customize",
+    "cookies.privacy_policy": "Privacy Policy",
+
     // =========== Guides ===========  //
-    "guides.title": "CodeXtremeOS Guides",
+    "guides.title": "CodeXtreme Guides",
     "guides.description":
       "🚀 Master optimization with our step-by-step guides.",
     "guides.meta_title": "Guides and Tutorials - CodeXtremeOS",

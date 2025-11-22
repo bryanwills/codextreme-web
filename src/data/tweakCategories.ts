@@ -26,42 +26,53 @@ export const CATEGORY_ICONS: Record<TweakCategory, string> = {
 
 export const CATEGORY_COLORS: Record<
   TweakCategory,
-  { color: string; textColor: string }
+  { color: string; textColor: string; glow: string }
 > = {
   network: {
+    // Reverting to original Slate as requested ("el que tenia")
     color: "from-slate-600 to-slate-800",
-    textColor: "from-slate-700 to-slate-900",
+    textColor: "from-slate-400 to-slate-500",
+    glow: "shadow-slate-500/20",
   },
   memory: {
-    color: "from-purple-400 to-purple-600",
-    textColor: "from-purple-500 to-purple-700",
+    color: "from-fuchsia-900 via-purple-900 to-purple-950",
+    textColor: "from-fuchsia-400 to-purple-400",
+    glow: "shadow-fuchsia-900/20",
   },
   gpu: {
-    color: "from-green-400 to-green-600",
-    textColor: "from-green-500 to-green-700",
+    color: "from-emerald-900 via-green-900 to-green-950",
+    textColor: "from-emerald-400 to-green-400",
+    glow: "shadow-emerald-900/20",
   },
   windows_features: {
-    color: "from-cyan-400 to-cyan-600",
-    textColor: "from-cyan-500 to-cyan-700",
+    color: "from-blue-900 via-indigo-900 to-indigo-950",
+    textColor: "from-blue-400 to-indigo-400",
+    glow: "shadow-blue-900/20",
   },
   firewall_security: {
-    color: "from-red-400 to-red-600",
-    textColor: "from-red-500 to-red-700",
+    // Reverting to Vibrant Red in case "Red" meant this category
+    color: "from-rose-500 via-red-600 to-red-800",
+    textColor: "from-rose-400 to-red-400",
+    glow: "shadow-rose-500/20",
   },
   nagle_algorithm: {
-    color: "from-orange-400 to-orange-600",
-    textColor: "from-orange-500 to-orange-700",
+    color: "from-amber-800 via-orange-900 to-orange-950",
+    textColor: "from-amber-400 to-orange-400",
+    glow: "shadow-amber-900/20",
   },
   network_throttling: {
-    color: "from-pink-400 to-pink-600",
-    textColor: "from-pink-500 to-pink-700",
+    color: "from-pink-900 via-rose-900 to-rose-950",
+    textColor: "from-pink-400 to-rose-400",
+    glow: "shadow-pink-900/20",
   },
   system_responsiveness: {
-    color: "from-indigo-400 to-indigo-600",
-    textColor: "from-indigo-500 to-indigo-700",
+    color: "from-violet-900 via-purple-900 to-purple-950",
+    textColor: "from-violet-400 to-purple-400",
+    glow: "shadow-violet-900/20",
   },
   latency_timers: {
-    color: "from-yellow-400 to-yellow-600",
-    textColor: "from-yellow-500 to-yellow-700",
+    color: "from-yellow-800 via-amber-900 to-amber-950",
+    textColor: "from-yellow-400 to-amber-400",
+    glow: "shadow-yellow-900/20",
   },
 };
