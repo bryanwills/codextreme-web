@@ -26,4 +26,9 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    preview: {
+      allowedHosts: ["codextreme.es", "www.codextreme.es"],
+    },
+  },
 });
