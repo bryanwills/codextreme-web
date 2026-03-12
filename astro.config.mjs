@@ -26,9 +26,22 @@ export default defineConfig({
       },
     }),
   ],
+  // AQUI ESTÁ LA MAGIA: Nivel raíz de Astro
+  server: {
+    host: true,
+    allowedHosts: true
+  },
+  preview: {
+    host: true,
+    allowedHosts: true
+  },
+  // Lo dejamos en Vite también como doble seguro
   vite: {
     preview: {
-      allowedHosts: ["codextreme.es", "www.codextreme.es"],
+      allowedHosts: true
     },
-  },
+    server: {
+      allowedHosts: true
+    }
+  }
 });
