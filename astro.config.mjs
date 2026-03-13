@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
@@ -14,7 +14,6 @@ export default defineConfig({
   },
   output: "static",
   integrations: [
-    tailwind(),
     react(),
     sitemap({
       i18n: {
@@ -29,19 +28,20 @@ export default defineConfig({
   // AQUI ESTÁ LA MAGIA: Nivel raíz de Astro
   server: {
     host: true,
-    allowedHosts: true
+    allowedHosts: true,
   },
   preview: {
     host: true,
-    allowedHosts: true
+    allowedHosts: true,
   },
   // Lo dejamos en Vite también como doble seguro
   vite: {
+    plugins: [tailwindcss()],
     preview: {
-      allowedHosts: true
+      allowedHosts: true,
     },
     server: {
-      allowedHosts: true
-    }
-  }
+      allowedHosts: true,
+    },
+  },
 });
