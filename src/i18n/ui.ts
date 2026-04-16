@@ -84,7 +84,7 @@ export const labels = {
     "footer.newsletter":
       "Recibe noticias sobre nuevas versiones y características",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 Kiri86. Todos los derechos reservados.",
+    "footer.copyright": "© 2026 OscarDev. Todos los derechos reservados.",
     "footer.privacy": "Privacidad",
     "footer.terms": "Términos",
     "footer.github.title": "Proyecto CodeXtreme ",
@@ -499,7 +499,7 @@ export const labels = {
     "footer.subscribe": "Subscribe",
     "footer.newsletter": "Receive news about new versions and features",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2025 v. All rights reserved.",
+    "footer.copyright": "© 2026 OscarDev. All rights reserved.",
     "footer.privacy": "Privacy",
     "footer.terms": "Terms",
     "footer.github.title": "Project CodeXtreme",
