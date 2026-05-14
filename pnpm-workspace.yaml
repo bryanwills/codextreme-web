@@ -4,7 +4,7 @@ packages:
 overrides:
   path-to-regexp: ">=8.4.2"
   esbuild: ">=0.28.0"
-  devalue: ">=5.8.0"
+  devalue: ">=5.8.1"
   h3: ^1.15.10
   minimatch: ">=10.2.4"
   picomatch@^2.0.0: 4.0.4
