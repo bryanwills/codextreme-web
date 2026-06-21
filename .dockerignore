@@ -1,0 +1,10 @@
+node_modules
+dist
+.astro
+.git
+.gitignore
+.vscode
+.npmrc
+*.md
+npm-debug.log*
+pnpm-debug.log*
