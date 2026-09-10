@@ -6,7 +6,7 @@
 
 Official **CodeXtreme** website - Informative web created by **XOscarDevX**. Open source project built with Astro and Tailwind CSS for maximum efficiency and performance.
 
-[![Desktop](https://i.imgur.com/ED5S5vR.png)](https://www.codextreme.es)
+[![CodeXtremeOS — Benchmark Lab redesign](public/screenshot.png)](https://www.codextreme.es)
 
 ## Project Purpose
 

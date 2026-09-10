@@ -13,6 +13,9 @@ export const labels = {
     "nav.download": "Descargas",
     "nav.optimizer": "Win Optimizer",
 
+    // =========== Header =========== //
+    "header.download_cta": "Descargar",
+
     // =========== Tema =========== //
     "theme.toggle": "Cambiar Tema",
 
@@ -543,6 +546,9 @@ export const labels = {
     "nav.software": "Software",
     "nav.download": "Downloads",
     "nav.optimizer": "Win Optimizer",
+
+    // =========== Header =========== //
+    "header.download_cta": "Download",
 
     // =========== Theme =========== //
     "theme.toggle": "Toggle Theme",
