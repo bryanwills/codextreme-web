@@ -4,7 +4,7 @@
 [![Astro](https://img.shields.io/badge/-Astro-FF5D01?logo=astro&logoColor=white)](https://astro.build)
 [![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
-Official **CodeXtreme** website - Informative web created by **Kiri86**. Open source project built with Astro and Tailwind CSS for maximum efficiency and performance.
+Official **CodeXtreme** website - Informative web created by **XOscarDevX**. Open source project built with Astro and Tailwind CSS for maximum efficiency and performance.
 
 [![Desktop](https://i.imgur.com/ED5S5vR.png)](https://www.codextreme.es)
 
@@ -43,48 +43,48 @@ Hot reload, TypeScript support, and modern tooling
 
 ## Tech Stack
 
-- **Astro** v5.11.0 - Next-generation static framework
-- **React** v19.1.0 - UI library for interactive components
-- **Tailwind CSS** v3.4.0 - Modern CSS utilities framework
-- **TypeScript** - Type-safe development
+- **Astro** v7.3.2 - Next-generation static framework
+- **React** v19.2.6 - UI library for interactive components
+- **Tailwind CSS** v4.3.0 - Modern CSS utilities framework (CSS-first config)
+- **TypeScript** - Type-safe development (strict mode)
 - **Heroicons** v2.2.0 - Beautiful hand-crafted SVG icons
 - **Prism.js** v1.30.0 - Syntax highlighting for code blocks
-- **Nanostores** v1.0.1 - State management solution
 
 ### Additional Tools & Plugins
 
-- **@astrojs/tailwind** v6.0.2 - Astro integration for Tailwind CSS
-- **@astrojs/react** v4.3.0 - React integration for Astro
-- **@tailwindcss/forms** v0.5.10 - Form styling plugin
-- **@tailwindcss/typography** v0.5.16 - Typography plugin for rich content
-- **PostCSS** v8.5.6 - CSS processing tool
-- **Autoprefixer** v10.4.21 - CSS vendor prefixing
+- **@astrojs/react** v6.0.5 - React integration for Astro
+- **@astrojs/sitemap** v3.7.4 - Sitemap generation with i18n support
+- **@tailwindcss/vite** v4.3.0 - Tailwind CSS v4 Vite plugin
+- **Vite** v7.3.5 - Build tool and dev server
 
 ## Project Architecture
 
 ```
 src/
 ├── components/          # Reusable Astro components
-├── i18n/               # Internationalization utilities
-├── layouts/            # Page layouts
-├── pages/              # Route pages (en/es)
-├── styles/             # Global styles and Tailwind CSS
-└── public/             # Static assets (images, icons)
+├── data/                # Tweak definitions (network, GPU, memory, ...)
+├── i18n/                # Internationalization utilities
+├── layouts/             # Page layouts
+├── pages/               # Route pages (en/es)
+└── styles/              # Tailwind v4 CSS-first theme
+
+public/                  # Static assets (images, icons, _headers, _redirects)
+scripts/                 # Helper scripts
 ```
 
 ### Key Configuration Files
 
-- `astro.config.mjs` - Astro configuration with React & Tailwind integrations
-- `tailwind.config.cjs` - Tailwind CSS configuration with custom theme
-- `postcss.config.cjs` - PostCSS configuration for CSS processing
-- `tsconfig.json` - TypeScript configuration
+- `astro.config.mjs` - Astro configuration (React, Sitemap, Tailwind Vite plugin, i18n)
+- `src/styles/tailwind.css` - Tailwind v4 CSS-first theme (`@theme` tokens)
+- `pnpm-workspace.yaml` - pnpm settings and security `overrides` for transitive CVEs
+- `tsconfig.json` - TypeScript configuration (extends `astro/tsconfigs/strict`)
 
 ## Local Development
 
 Prerequisites:
 
-- **Node.js** v20.x or higher
-- **pnpm** v9.12.3 or higher
+- **Node.js** v22.12.0 or higher (see `.nvmrc`)
+- **pnpm** v12.3.4 (pinned via `packageManager` in `package.json`)
 
 Installation steps:
 

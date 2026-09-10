@@ -32,7 +32,7 @@ export const labels = {
     "home.desopti":
       "ISO modificada de solo 3.2 GB con máximo rendimiento para gaming y productividad.",
     "home.dev.des":
-      "Creada por Kiri86 con meses de pruebas y optimizaciones para un rendimiento extremo.",
+      "Creada por XOscarDevX con meses de pruebas y optimizaciones para un rendimiento extremo.",
     "home.safety": "Seguridad Garantizada",
     "home.safe.des":
       "Con las últimas actualizaciones de seguridad y protección contra malware.",
@@ -84,20 +84,26 @@ export const labels = {
     "footer.newsletter":
       "Recibe noticias sobre nuevas versiones y características",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2026 OscarDev. Todos los derechos reservados.",
+    "footer.copyright": "© 2026 XOscarDevX. Todos los derechos reservados.",
     "footer.privacy": "Privacidad",
     "footer.terms": "Términos",
     "footer.github.title": "Proyecto CodeXtreme ",
     "footer.github.description": "Descarga desde GitHub",
     "footer.github.star": "Estrella en GitHub",
+    "footer.brand_description":
+      "Windows 10/11 aligerado en banco de pruebas. ISOs de 3.2–5 GB, sin bloatware, con tienda opcional y lineage NTLite documentada. Hecho por XOscarDevX, abierto en GitHub.",
+    "footer.star_on_github": "Star en GitHub",
+    "footer.updates_description": "Recibe nuevas builds y tweaks verificados.",
 
     // =========== Accesibilidad =========== //
-    "aria.social.twitter": "Enlace a Twitter de Kiri86",
-    "aria.social.github": "Enlace a GitHub de Kiri86",
-    "aria.social.youtube": "Enlace a YouTube de Kiri86",
-    "aria.social.discord": "Enlace a Discord de Kiri86",
-    "aria.social.linkedin": "Enlace a LinkedIn de Kiri86",
-    "aria.social.reddit": "Enlace a Reddit de Kiri86",
+    "aria.social.twitter": "Enlace a Twitter de XOscarDevX",
+    "aria.social.github": "Enlace a GitHub de XOscarDevX",
+    "aria.social.youtube": "Enlace a YouTube de XOscarDevX",
+    "aria.social.discord": "Enlace a Discord de XOscarDevX",
+    "aria.social.linkedin": "Enlace a LinkedIn de XOscarDevX",
+    "aria.social.reddit": "Enlace a Reddit de XOscarDevX",
+    "aria.language_switch": "Cambiar idioma",
+    "aria.open_menu": "Abrir menú",
 
     // =========== Barra de Accesibilidad =========== //
     "accessibility.title": "Herramientas de Accesibilidad",
@@ -409,19 +415,125 @@ export const labels = {
 
     // =========== Win Optimizer =========== //
     "optimizer.title": "Win Optimizer",
-    "optimizer.hero_description": "Optimización avanzada del sistema Windows",
-    "optimizer.sections.network": "Red",
-    "optimizer.sections.memory": "Memoria",
-    "optimizer.sections.gpu": "GPU",
-    "optimizer.sections.windows_features": "Características de Windows",
-    "optimizer.sections.firewall_security": "Firewall y Seguridad",
-    "optimizer.sections.nagle_algorithm": "Algoritmo de Nagle",
-    "optimizer.sections.network_throttling": "Network Throttling",
-    "optimizer.sections.system_responsiveness": "System Responsiveness",
-    "optimizer.sections.latency_timers": "Latencia y Timers",
-    "optimizer.explore":
-      "Explora todos los tweaks y optimizaciones disponibles",
-    "optimizer.view_more": "Ver más",
+
+    // =========== Home (markup) =========== //
+    "home.hero.line2": "sin lastre.",
+    "home.hero.line3": "Solo velocidad.",
+    "home.hero.sub":
+      "— ISO de 3.2–5 GB, bloatware y telemetría fuera, tienda y Xbox opcionales. Medido en banco, no prometido.",
+    "home.hero.cta_guides": "Ver guías NTLite",
+    "home.section.about": "Bench 01 — Qué es CodeXtremeOS",
+    "home.card.weight": "Bench 01 — Peso",
+    "home.card.security": "Bench 02 — Seguridad",
+    "home.card.support": "Bench 07 — Soporte",
+    "home.card.appearance": "Bench 08 — Apariencia",
+    "home.note.eyebrow": "Bench 09 — Nota del taller",
+    "home.note.title1": "Creada por XOscarDevX.",
+    "home.note.title2": "Meses de prueba.",
+    "home.note.cta": "Ver lineage en GitHub",
+    "home.wall.telemetry": "Telemetría mínima · updates críticas",
+    "home.proof.no": "Sin",
+    "home.proof.telemetry": "telemetría",
+    "home.workshop.title": "Hecha con NTLite. Replicable por ti.",
+    "home.workshop.body1": "Esta ISO fue optimizada y creada con ",
+    "home.workshop.body2":
+      ", una herramienta profesional que cualquiera puede usar. Te recomendamos crear tu propia ISO para máximo control.",
+    "home.workshop.official_guides": "Guías oficiales NTLite →",
+    "home.workshop.our_guides": "Nuestras guías",
+    "home.workshop.resources": "Recursos de aprendizaje",
+    "home.workshop.resources1": "Guías y tutoriales en el ",
+    "home.workshop.resources2": "foro oficial de NTLite",
+    "home.workshop.recommendation": "Recomendación",
+    "home.workshop.recommendation_body":
+      "Te recomendamos crear tu propia ISO personalizada para máxima seguridad y control.",
+    "home.cta.body":
+      "Descarga directa, sin adware, con lineage documentada. O fabrica la tuya en el workshop.",
+    "home.cta.open_optimizer": "Abrir Win Optimizer",
+    "home.cta.build_note":
+      "BUILD 25H2 · 5 GB ISO · hash verifica en descargas · no se requiere internet para instalar",
+
+    // =========== Guías / Software / Herramientas / Descargas (markup) =========== //
+    "guides.badge": "Workshop — Guías paso a paso",
+    "guides.support.eyebrow": "Soporte a creadores",
+    "guides.read_guide": "Ver guía",
+    "guides.tag.customize": "Personaliza",
+    "guides.tag.policies": "Directivas",
+    "software.hero_sub":
+      "Runtimes y apps esenciales, todas verificadas. Sin adware, con hash y origen oficial.",
+    "software.disclaimer_label": "Aviso legal",
+    "tools.hero_sub":
+      "Herramientas curadas del taller: optimización, personalización y seguridad — todas verificadas en bench.",
+    "tools.opensource.eyebrow": "Open Source Primero",
+    "downloads.eyebrow": "Storage rack — ISOs verificadas",
+    "downloads.hero_sub":
+      "— Todas x64 UEFI, sin telemetría, con lineage NTLite documentada.",
+    "downloads.recommended": "25H2 recomendada",
+    "downloads.rack_status": "Estado del rack",
+    "downloads.verify_note":
+      "Verifica SHA256 tras descargar. Sin internet requerida para instalación.",
+    "downloads.recommended_badge": "RECOMENDADA",
+    "downloads.more": "más…",
+    "downloads.badge.stable": "Estable",
+    "downloads.badge.limited_support": "Soporte limitado",
+
+    // =========== Win Optimizer (markup) =========== //
+    "optimizer.hero.line1": "Toma el control",
+    "optimizer.hero.line2": "de tu Windows.",
+    "optimizer.hero.sub":
+      "La herramienta que reemplaza nuestro viejo panel de tweaks. System restore, 140+ tweaks documentados, 181 apps y monitor en un único .exe portable — sin instalación.",
+    "optimizer.install.label": "Install en una línea — PowerShell admin",
+    "optimizer.install.note":
+      "Sin descargas. Siempre la última versión. Auto-eleva a Admin.",
+    "optimizer.cta.download": "Descargar .exe",
+    "optimizer.cta.github": "Ver en GitHub",
+    "optimizer.numbers.label": "En números — real",
+    "optimizer.numbers.categories": "Categorías",
+    "optimizer.old.title": "¿Vienes del optimizer viejo?",
+    "optimizer.old.body1":
+      "Este es el reemplazo. Ya no usamos 8 categorías web sueltas: todo está dentro de la app, con ejecución vía PowerShell (CIM/NetFirewallRule), sticky toolbar y ",
+    "optimizer.old.emphasis": "ShutUp10++ integrado",
+    "optimizer.old.body2":
+      ". Si buscabas tweaks web, ahora están en la pestaña Tweaks de la app.",
+    "optimizer.section.title": "Todo lo que necesitas, en un portable",
+    "optimizer.feature.restore.body":
+      "Crea puntos con nombre custom. Bypass del cooldown 24h vía registro. Backup completo a .reg de los 5 hives + drivers.",
+    "optimizer.feature.apps.body":
+      "Incluye Microsoft Tools (.NET 6/8/9/10, Sysinternals, PS7, PowerToys). Instala/desinstala vía WinGet o Chocolatey con botón dinámico y buscador sticky.",
+    "optimizer.feature.tweaks.body":
+      "Network, memory, GPU, privacy, firewall, Nagle, latency timers… Ejecución robusta con cmdlets (no wmic/netsh frágiles), toolbar sticky y launch ShutUp10++.",
+    "optimizer.feature.windows.body":
+      "Activa/desactiva .NET, Hyper-V, WSL, Sandbox, NFS, F8. Fixes: reset red, NTP, SFC/DISM, WU reset. Sin colgarse en payloads.",
+    "optimizer.feature.startup.body":
+      "Run keys (HKLM/HKCU/WOW64), carpetas Startup, tareas UWP (Claude, Terminal, WhatsApp) y scheduled tasks Logon/Boot. Toggle reversible vía StartupApproved.",
+    "optimizer.feature.monitor.body":
+      "Impact Dashboard con deltas vs visita anterior (disk, startups, servicios) + 3×2 real-time: CPU/GPU temp, discos, uptime, latencia y Health Score A+–F.",
+    "optimizer.terminal.title": "Terminal lateral acoplada",
+    "optimizer.terminal.body":
+      "Salida en tiempo real a la derecha, redimensionable 280px→70% (persistido), colapsable a 36px. Copy/clear, 6 acentos + 6 fuentes.",
+    "optimizer.stack.label": "Stack real",
+    "optimizer.get_started.title": "Cómo empezar",
+    "optimizer.get_started.step1": "Descarga el .exe desde GitHub Releases",
+    "optimizer.get_started.step2": "Ejecuta como Administrador",
+    "optimizer.get_started.step3": "(Recomendado) Crea punto de restauración",
+    "optimizer.get_started.step4": "Usa cualquier pestaña: apps, tweaks, fixes",
+    "optimizer.get_started.prereqs":
+      "Prereqs: Windows 10/11 + WebView2. Go 1.20+ y Wails v2 solo si compilas.",
+    "optimizer.av.title": "Aviso antivirus",
+    "optimizer.av.body1":
+      "Usa PowerShell, DISM, WMI y registro — algunos AV lo marcan como sospechoso. Todo es open source: ",
+    "optimizer.av.link": "revisa el código",
+    "optimizer.av.body2": " o compílalo tú.",
+    "optimizer.deprecated":
+      "¿Buscabas las categorías web sueltas (network, memory, gpu…)? Ahora viven dentro de la app → pestaña Tweaks.",
+
+    // =========== SEO (valores por defecto) =========== //
+    "seo.title": "CodeXtremeOS — Windows sin lastre. Solo velocidad.",
+    "seo.description":
+      "ISOs de Windows 10/11 optimizadas con NTLite para gaming: 3.2–5 GB, bloatware eliminado, telemetría mínima y tienda opcional. Datos reales, guías para crear tu propia ISO.",
+    "seo.keywords":
+      "Windows optimizado, gaming, rendimiento, CodeXtremeOS, ISO NTLite, sin bloatware, mejorar FPS",
+    "seo.schema_description":
+      "ISO de Windows 10/11 aligerada con NTLite para gaming y máximo rendimiento. Benchmarks reales, tweaks documentados.",
   },
   en: {
     // =========== Navigation =========== //
@@ -451,7 +563,7 @@ export const labels = {
     "home.desopti":
       "Modified ISO of only 3.2 GB with maximum performance for gaming and productivity.",
     "home.dev.des":
-      "Created by Kiri86 with months of testing and optimizations for extreme performance.",
+      "Created by XOscarDevX with months of testing and optimizations for extreme performance.",
     "home.safety": "Guaranteed Security",
     "home.safe.des": "With the latest security updates and malware protection.",
     "home.xbox": "Xbox Live",
@@ -499,20 +611,26 @@ export const labels = {
     "footer.subscribe": "Subscribe",
     "footer.newsletter": "Receive news about new versions and features",
     "footer.email.placeholder": "Email",
-    "footer.copyright": "© 2026 OscarDev. All rights reserved.",
+    "footer.copyright": "© 2026 XOscarDevX. All rights reserved.",
     "footer.privacy": "Privacy",
     "footer.terms": "Terms",
     "footer.github.title": "Project CodeXtreme",
     "footer.github.description": "Download the project on GitHub",
     "footer.github.star": "Star on GitHub",
+    "footer.brand_description":
+      "Windows 10/11 slimmed down on a test bench. 3.2–5 GB ISOs, no bloatware, optional Store and documented NTLite lineage. Built by XOscarDevX, open on GitHub.",
+    "footer.star_on_github": "Star on GitHub",
+    "footer.updates_description": "Get new builds and verified tweaks.",
 
     // =========== Accessibility =========== //
-    "aria.social.twitter": "Link to Kiri86 Twitter",
-    "aria.social.github": "Link to Kiri86 GitHub",
-    "aria.social.youtube": "Link to Kiri86 YouTube",
-    "aria.social.discord": "Link to Kiri86 Discord",
-    "aria.social.linkedin": "Link to Kiri86 LinkedIn",
-    "aria.social.reddit": "Link to Kiri86 Reddit",
+    "aria.social.twitter": "Link to XOscarDevX Twitter",
+    "aria.social.github": "Link to XOscarDevX GitHub",
+    "aria.social.youtube": "Link to XOscarDevX YouTube",
+    "aria.social.discord": "Link to XOscarDevX Discord",
+    "aria.social.linkedin": "Link to XOscarDevX LinkedIn",
+    "aria.social.reddit": "Link to XOscarDevX Reddit",
+    "aria.language_switch": "Change language",
+    "aria.open_menu": "Open menu",
 
     // =========== Accessibility Toolbar =========== //
     "accessibility.title": "Accessibility Tools",
@@ -804,17 +922,124 @@ export const labels = {
 
     // =========== Win Optimizer =========== //
     "optimizer.title": "Win Optimizer",
-    "optimizer.hero_description": "Advanced Windows system optimization",
-    "optimizer.sections.network": "Network",
-    "optimizer.sections.memory": "Memory",
-    "optimizer.sections.gpu": "GPU",
-    "optimizer.sections.windows_features": "Windows Features",
-    "optimizer.sections.firewall_security": "Firewall and Security",
-    "optimizer.sections.nagle_algorithm": "Nagle Algorithm",
-    "optimizer.sections.network_throttling": "Network Throttling",
-    "optimizer.sections.system_responsiveness": "System Responsiveness",
-    "optimizer.sections.latency_timers": "Latency and Timers",
-    "optimizer.explore": "Explore all available tweaks and optimizations",
-    "optimizer.view_more": "View More",
+
+    // =========== Home (markup) =========== //
+    "home.hero.line2": "no dead weight.",
+    "home.hero.line3": "Pure speed.",
+    "home.hero.sub":
+      "— 3.2–5 GB ISO, bloatware and telemetry stripped out, Store and Xbox optional. Bench-measured, not promised.",
+    "home.hero.cta_guides": "See NTLite guides",
+    "home.section.about": "Bench 01 — What is CodeXtremeOS",
+    "home.card.weight": "Bench 01 — Weight",
+    "home.card.security": "Bench 02 — Security",
+    "home.card.support": "Bench 07 — Support",
+    "home.card.appearance": "Bench 08 — Appearance",
+    "home.note.eyebrow": "Bench 09 — Workshop note",
+    "home.note.title1": "Built by XOscarDevX.",
+    "home.note.title2": "Months of testing.",
+    "home.note.cta": "View lineage on GitHub",
+    "home.wall.telemetry": "Minimal telemetry · critical updates only",
+    "home.proof.no": "No",
+    "home.proof.telemetry": "telemetry",
+    "home.workshop.title": "Built with NTLite. Replicable by you.",
+    "home.workshop.body1": "This ISO was optimized and built with ",
+    "home.workshop.body2":
+      ", a professional tool anyone can use. We recommend building your own ISO for maximum control.",
+    "home.workshop.official_guides": "Official NTLite guides →",
+    "home.workshop.our_guides": "Our guides",
+    "home.workshop.resources": "Learning resources",
+    "home.workshop.resources1": "Guides and tutorials in the ",
+    "home.workshop.resources2": "official NTLite forum",
+    "home.workshop.recommendation": "Recommendation",
+    "home.workshop.recommendation_body":
+      "We recommend building your own custom ISO for maximum security and control.",
+    "home.cta.body":
+      "Direct download, no adware, documented lineage. Or build your own in the workshop.",
+    "home.cta.open_optimizer": "Open Win Optimizer",
+    "home.cta.build_note":
+      "BUILD 25H2 · 5 GB ISO · verify hash in downloads · no internet required to install",
+
+    // =========== Guides / Software / Tools / Downloads (markup) =========== //
+    "guides.badge": "Workshop — Step-by-step guides",
+    "guides.support.eyebrow": "Supporting creators",
+    "guides.read_guide": "Read guide",
+    "guides.tag.customize": "Customize",
+    "guides.tag.policies": "Policies",
+    "software.hero_sub":
+      "Essential runtimes and apps, all verified. No adware, with hash and official source.",
+    "software.disclaimer_label": "Disclaimer",
+    "tools.hero_sub":
+      "Workshop-curated tools: optimization, customization and security — all benchmark-verified.",
+    "tools.opensource.eyebrow": "Open Source First",
+    "downloads.eyebrow": "Storage rack — verified ISOs",
+    "downloads.hero_sub":
+      "— All x64 UEFI, no telemetry, documented NTLite lineage.",
+    "downloads.recommended": "25H2 recommended",
+    "downloads.rack_status": "Rack status",
+    "downloads.verify_note":
+      "Verify SHA256 after downloading. No internet required for installation.",
+    "downloads.recommended_badge": "RECOMMENDED",
+    "downloads.more": "more…",
+    "downloads.badge.stable": "Stable",
+    "downloads.badge.limited_support": "Limited support",
+
+    // =========== Win Optimizer (markup) =========== //
+    "optimizer.hero.line1": "Take control",
+    "optimizer.hero.line2": "of your Windows.",
+    "optimizer.hero.sub":
+      "The tool that replaces our old tweaks panel. System restore, 140+ documented tweaks, 181 apps and a monitor in a single portable .exe — no installation.",
+    "optimizer.install.label": "One-line install — PowerShell admin",
+    "optimizer.install.note":
+      "No downloads. Always the latest version. Auto-elevates to Admin.",
+    "optimizer.cta.download": "Download .exe",
+    "optimizer.cta.github": "View on GitHub",
+    "optimizer.numbers.label": "By the numbers — real",
+    "optimizer.numbers.categories": "Categories",
+    "optimizer.old.title": "Coming from the old optimizer?",
+    "optimizer.old.body1":
+      "This is the replacement. We no longer use 8 standalone web categories: everything lives inside the app, executed via PowerShell (CIM/NetFirewallRule), sticky toolbar and ",
+    "optimizer.old.emphasis": "ShutUp10++ built in",
+    "optimizer.old.body2":
+      ". If you were looking for the web tweaks, they now live in the app's Tweaks tab.",
+    "optimizer.section.title": "Everything you need, in one portable",
+    "optimizer.feature.restore.body":
+      "Create restore points with custom names. 24h cooldown bypass via registry. Full .reg backup of all 5 hives + drivers.",
+    "optimizer.feature.apps.body":
+      "Includes Microsoft Tools (.NET 6/8/9/10, Sysinternals, PS7, PowerToys). Install/uninstall via WinGet or Chocolatey with a dynamic button and sticky search.",
+    "optimizer.feature.tweaks.body":
+      "Network, memory, GPU, privacy, firewall, Nagle, latency timers… Robust execution via cmdlets (no fragile wmic/netsh), sticky toolbar and ShutUp10++ launch.",
+    "optimizer.feature.windows.body":
+      "Enable/disable .NET, Hyper-V, WSL, Sandbox, NFS, F8. Fixes: network reset, NTP, SFC/DISM, WU reset. No hanging on payloads.",
+    "optimizer.feature.startup.body":
+      "Run keys (HKLM/HKCU/WOW64), Startup folders, UWP tasks (Claude, Terminal, WhatsApp) and Logon/Boot scheduled tasks. Reversible toggle via StartupApproved.",
+    "optimizer.feature.monitor.body":
+      "Impact Dashboard with deltas vs the previous visit (disk, startups, services) + 3×2 real-time: CPU/GPU temp, disks, uptime, latency and A+–F Health Score.",
+    "optimizer.terminal.title": "Docked side terminal",
+    "optimizer.terminal.body":
+      "Real-time output on the right, resizable 280px→70% (persisted), collapsible to 36px. Copy/clear, 6 accents + 6 fonts.",
+    "optimizer.stack.label": "Real stack",
+    "optimizer.get_started.title": "How to get started",
+    "optimizer.get_started.step1": "Download the .exe from GitHub Releases",
+    "optimizer.get_started.step2": "Run as Administrator",
+    "optimizer.get_started.step3": "(Recommended) Create a restore point",
+    "optimizer.get_started.step4": "Use any tab: apps, tweaks, fixes",
+    "optimizer.get_started.prereqs":
+      "Prereqs: Windows 10/11 + WebView2. Go 1.20+ and Wails v2 only if you compile.",
+    "optimizer.av.title": "Antivirus notice",
+    "optimizer.av.body1":
+      "It uses PowerShell, DISM, WMI and the registry — some AVs flag it as suspicious. Everything is open source: ",
+    "optimizer.av.link": "review the code",
+    "optimizer.av.body2": " or compile it yourself.",
+    "optimizer.deprecated":
+      "Looking for the standalone web categories (network, memory, gpu…)? They now live inside the app → Tweaks tab.",
+
+    // =========== SEO (defaults) =========== //
+    "seo.title": "CodeXtremeOS — Windows with no dead weight. Pure speed.",
+    "seo.description":
+      "Windows 10/11 ISOs optimized with NTLite for gaming: 3.2–5 GB, bloatware removed, minimal telemetry and optional Store. Real data and guides to build your own ISO.",
+    "seo.keywords":
+      "optimized Windows, gaming, performance, CodeXtremeOS, NTLite ISO, bloatware free, improve FPS",
+    "seo.schema_description":
+      "Windows 10/11 ISO slimmed down with NTLite for gaming and maximum performance. Real benchmarks, documented tweaks.",
   },
 };

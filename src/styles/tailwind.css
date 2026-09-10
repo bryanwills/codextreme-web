@@ -1,35 +1,51 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #ff6f61;
-  --color-secondary: #6b5b95;
-  --color-darkbg: #1a1a1a;
-  --color-lightbg: #f4f4f4;
+  --color-bg: #07080B;
+  --color-surface: #111318;
+  --color-surface-2: #171A21;
+  --color-surface-3: #1C202B;
+  --color-border: #232730;
+  --color-border-strong: #2D3340;
+  --color-text: #F2F3F5;
+  --color-muted: #8B92A8;
+  --color-muted-2: #61697E;
+  --color-lime: #BFFF00;
+  --color-lime-soft: #E3FF90;
+  --color-violet: #7C5CFF;
+  --color-violet-soft: #B8A6FF;
+  --color-cyan: #00E5FF;
+  --color-amber: #FFB020;
+  --color-danger: #FF3344;
 
-  --shadow-xl-dark:
-    0 20px 25px -5px rgba(255, 255, 255, 0.1),
-    0 8px 10px -6px rgba(255, 255, 255, 0.1);
+  --font-display: "Clash Display", sans-serif;
+  --font-body: "Geist", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
-  --animate-slide-up: slideUp 0.5s ease-in-out;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  --shadow-bench: 0 24px 48px -12px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04) inset;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+* { scrollbar-width: thin; scrollbar-color: var(--color-border-strong) transparent; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #2D3340; border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
 
-@keyframes slideUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+html { font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+
+@keyframes bench-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-live {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
 }

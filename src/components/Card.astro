@@ -1,42 +1,37 @@
 ---
-const { title, description, borderColor, icon } = Astro.props;
-
-const colorClass = borderColor.replace("border-", "text-");
+const { title, description, borderColor, icon, eyebrow, meta } = Astro.props;
+// borderColor kept for compatibility but mapped to subtle neutral; we don't use colored left border per craft floor
 ---
 
-<div
-  class={`group relative bg-white dark:bg-[#1A1A1A] p-8 rounded-2xl border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 overflow-hidden h-full flex flex-col`}
->
-  <div
-    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-gray-50 to-transparent dark:from-white/5 dark:to-transparent pointer-events-none"
-  >
-  </div>
+<div class="group relative flex flex-col h-full rounded-[16px] bg-[#111318] border border-[#232730] p-6 overflow-hidden hover:border-[#2D3340] transition-colors">
+  <!-- subtle inner highlight -->
+  <div class="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background: radial-gradient(600px circle at 0% 0%, rgba(191,255,0,0.06), transparent 60%);"></div>
 
-  <div class="relative z-10 flex-grow">
-    <div
-      class={`w-12 h-12 mb-6 rounded-xl bg-gray-50 dark:bg-white/5 flex items-center justify-center border border-gray-100 dark:border-white/10 group-hover:scale-110 transition-transform duration-300`}
-    >
-      <svg
-        class={`w-6 h-6 ${colorClass}`}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
+  <div class="relative flex flex-col h-full">
+    {(eyebrow || meta) && (
+      <div class="flex items-center justify-between mb-4">
+        <span class="font-mono text-[11px] tracking-[0.12em] font-medium text-[#61697E] uppercase">{eyebrow || meta}</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-[#BFFF00] opacity-80"></span>
+      </div>
+    )}
+
+    <div class="w-10 h-10 rounded-[12px] bg-[#0D0F13] border border-[#232730] flex items-center justify-center mb-5 group-hover:border-[#2D3340] transition-colors">
+      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
         <path d={icon}></path>
       </svg>
     </div>
 
-    <h3
-      class="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-white/90 transition-colors"
-    >
+    <h3 class="font-[--font-display] font-semibold text-[18px] leading-[1.2] tracking-[-0.02em] text-white mb-2">
       {title}
     </h3>
 
-    <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+    <p class="text-[13.5px] leading-relaxed text-[#8B92A8]">
       {description}
     </p>
+
+    <div class="mt-auto pt-4 flex items-center gap-2 font-mono text-[11px] tracking-[0.08em] text-[#61697E] uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+      <span>Bench verified</span>
+      <span class="w-4 h-px bg-[#232730]"></span>
+    </div>
   </div>
 </div>

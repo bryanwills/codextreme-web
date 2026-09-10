@@ -6,6 +6,7 @@ import SeoMeta from "@/components/SeoMeta.astro";
 import AccessibilityToolbar from "@/components/AccessibilityToolbar.astro";
 import CookieBanner from "@/components/CookieBanner.astro";
 import { languageList } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
 
 interface Props {
   title?: string;
@@ -17,13 +18,15 @@ interface Props {
   schema?: string;
 }
 
+const currentLang = Astro.currentLocale || "en";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 const defaultSchema = JSON.stringify({
   "@context": "http://schema.org",
   "@type": "WebSite",
   url: "https://www.codextreme.es",
   name: "CodeXtremeOS",
-  description:
-    "La mejor ISO de Windows 10/11 optimizada con NTLite para gaming y máximo rendimiento.",
+  description: t("seo.schema_description"),
   potentialAction: {
     "@type": "SearchAction",
     target: "https://www.codextreme.es/buscar?q={search_term_string}",
@@ -32,65 +35,75 @@ const defaultSchema = JSON.stringify({
 });
 
 const {
-  title = "CodeXtremeOS: Windows Optimizado para Gaming | Mejora FPS y Rendimiento",
-  description = "Descarga CodeXtremeOS, la mejor ISO de Windows 10/11 optimizada con NTLite para gaming y máximo rendimiento. Elimina bloatware, lower latency, mejora tus FPS, y disfruta de un consumo de recursos mínimo con seguridad garantizada.",
-  keywords = "Windows optimizado, gaming, rendimiento, CodeXtremeOS, PC gaming, optimización Windows, windows gaming, mejorar FPS, sistema operativo gaming, ISO NTLite, sin bloatware",
+  title = t("seo.title"),
+  description = t("seo.description"),
+  keywords = t("seo.keywords"),
   ogImage = "https://www.codextreme.es/image.png",
   canonical,
   noindex = false,
   schema = defaultSchema,
 } = Astro.props;
-
-const currentLang = Astro.currentLocale || "en";
 ---
 
 <!doctype html>
-<html lang={currentLang} class="scroll-smooth">
+<html lang={currentLang} class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags y URLs canónicas -->
     <SeoMeta
       title={title}
       description={description}
       canonical={canonical}
       noindex={noindex}
     />
-
-    <!-- Título SEO dinámico -->
     <title>{title}</title>
-
-    <!-- Meta Tags SEO dinámicos -->
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-
-    <!-- Open Graph dinámico -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-
-    <!-- Twitter Cards dinámico -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-
-    <!-- Favicon y iconos -->
     <link rel="icon" href="/favicon.webp" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#6B5B95" />
-
-    <!-- Schema Markup JSON-LD -->
+    <meta name="theme-color" content="#07080B" />
     <script type="application/ld+json" set:html={schema} />
+    <style is:global>
+      html.dark {
+        color-scheme: dark;
+      }
+    </style>
   </head>
   <body
-    class="bg-white dark:bg-[#141414] text-gray-900 dark:text-gray-100 min-h-screen relative"
+    class="bg-[#07080B] text-[#F2F3F5] min-h-screen antialiased selection:bg-[#BFFF00] selection:text-black"
   >
+    {
+      /*
+    THESIS: Windows ligero se demuestra en banco de pruebas, no se promete. La web es el laboratorio que mide FPS, RAM y arranque.
+    OWN-WORLD: Benchmark Lab — negro vacío #07080B, paneles #111318/#171A21, borde #232730, acento lima #BFFF00 + violeta #7C5CFF. Clash Display para títulos (600-700, -0.03em), Geist para cuerpo, JetBrains Mono solo para datos/métricas. Radios 16px, elevación por borde fino, sin sombras fantasma. Grilla técnica sutil y curvas de telemetría como único ornamento.
+    STORY: El visitante entiende en 4s que CodeXtremeOS es Windows recortado y medible, cree por los deltas comparados (stock vs CodeXtreme) y descarga o aprende a fabricar su ISO sin perder confianza.
+    FIRST VIEWPORT: Header bench minimal (izq wordmark + dot live, centro nav mono píldora, der switch idioma/tema + CTA lime). Hero en dos columnas: izq headline 72px “Windows sin lastre. Solo velocidad.” + sub 20px + CTA lime primario + secundario outline; der panel bench (cabecera ventana con 3 dots + LIVE, contenido: barras comparativas ISO/RAM/Boot + sparkline FPS + lista tweaks tachados). Debajo tira de prueba: “Tested on 24H2 — 12.3s boot · 1.4GB idle · 5GB ISO”.
+    FORM: Benchmark Lab Telemetry Bench (candidate 6 of 7, seed 53609abd) — challengers weighed: HyperCard (pierde identificación gaming), Collider (gana claridad técnica pero pierde cercanía gamer), Deco (pierde ambos), Patent (gran claridad exploded-view pero pierde identificación masiva gamer), Tensegrity/RainGarden (pierden ambos). Gana Lab por doble eje.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    */
+    }
+    <div class="fixed inset-0 pointer-events-none -z-10">
+      <div class="absolute inset-0 bg-[#07080B]"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#7C5CFF]/[0.05] via-transparent to-transparent"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#BFFF00]/[0.02] via-transparent to-transparent"
+      >
+      </div>
+    </div>
+
     <Header />
-    <main class="min-h-[calc(100vh-8rem)] relative z-10">
-      <!-- Contenido -->
+    <main class="min-h-[calc(100vh-4.5rem)] relative pt-[64px]">
       <slot />
     </main>
     <Footer />

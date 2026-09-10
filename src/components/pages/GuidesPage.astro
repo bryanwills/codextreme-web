@@ -1,0 +1,152 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { languageList } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: keyof typeof languageList;
+}
+
+const { lang } = Astro.props;
+const currentLang = lang;
+const t = useTranslations(lang);
+
+const guides = [
+  {
+    title: "guides.guide1.title",
+    description: "guides.guide1.description",
+    link: "https://www.youtube.com/watch?v=fqTt4DarrOU",
+    tag: "NTLite · ISO",
+  },
+  {
+    title: "guides.guide2.title",
+    description: "guides.guide2.description",
+    link: "https://www.youtube.com/watch?v=SnP6opSHkNc",
+    tag: "Pack · 500%",
+  },
+  {
+    title: "guides.guide3.title",
+    description: "guides.guide3.description",
+    link: "https://www.youtube.com/watch?v=vqYixOxhdgc",
+    tag: t("guides.tag.customize"),
+  },
+  {
+    title: "guides.guide4.title",
+    description: "guides.guide4.description",
+    link: "https://www.youtube.com/watch?v=WfpFgQdWT20&list=PL0rDzzHg4fUli-ciiihzmJnr-scB0FuY8",
+    tag: t("guides.tag.policies"),
+  },
+  {
+    title: "guides.guide5.title",
+    description: "guides.guide5.description",
+    link: "https://www.youtube.com/watch?v=5Q8CHJxlil4",
+    tag: "CPU/RAM",
+  },
+  {
+    title: "guides.guide6.title",
+    description: "guides.guide6.description",
+    link: "https://windowsforum.com/threads/step-by-step-guide-how-to-do-a-clean-install-of-windows-11.264029/",
+    tag: "Clean install",
+  },
+  {
+    title: "guides.guide7.title",
+    description: "guides.guide7.description",
+    link: "https://www.youtube.com/watch?v=iBiNfa32AnE",
+    tag: "Win11",
+  },
+  {
+    title: "guides.guide8.title",
+    description: "guides.guide8.description",
+    link: "https://alternativeto.net/",
+    tag: "Software",
+  },
+];
+---
+
+<BaseLayout title={t("guides.meta_title")}>
+  <section class="max-w-[1280px] mx-auto px-4 md:px-6 pt-8 md:pt-10">
+    <div
+      class="rounded-[20px] bg-[#111318] border border-[#232730] p-6 md:p-10"
+    >
+      <div
+        class="inline-flex items-center gap-2 rounded-full border border-[#232730] bg-[#0D0F13] px-3 py-1.5 mb-5"
+      >
+        <span class="w-2 h-2 rounded-full bg-[#BFFF00]"></span>
+        <span
+          class="font-mono text-[11px] tracking-[0.1em] text-[#8B92A8] uppercase"
+        >
+          {t("guides.badge")}</span
+        >
+      </div>
+      <h1
+        class="font-[--font-display] font-bold text-[36px] md:text-[48px] tracking-[-0.03em] leading-[0.9] text-white"
+      >
+        {t("guides.title")}
+      </h1>
+      <p class="mt-4 text-[16px] leading-relaxed text-[#8B92A8] max-w-[60ch]">
+        {t("guides.description")}
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-[1280px] mx-auto px-4 md:px-6 mt-6">
+    <div
+      class="rounded-[16px] bg-[#0D0F13] border border-[#232730] p-5 flex flex-wrap gap-4 items-center justify-between"
+    >
+      <div>
+        <div
+          class="font-mono text-[11px] tracking-[0.1em] text-[#61697E] uppercase"
+        >
+          {t("guides.support.eyebrow")}
+        </div>
+        <p class="mt-1 text-[13px] text-[#8B92A8]">
+          <b class="text-white">{t("guides.support.title")}</b> — {
+            t("guides.support.description1")
+          }
+          <b class="text-[#BFFF00]">{t("guides.support.emphasis1")}</b>
+          {t("guides.support.description2")}
+          <b class="text-[#BFFF00]">{t("guides.support.emphasis2")}</b>
+          {t("guides.support.description3")}
+        </p>
+      </div>
+      <span
+        class="font-mono text-[11px] px-3 py-1.5 rounded-full bg-[#BFFF00] text-black font-semibold shrink-0"
+        >YouTube · Foro NTLite</span
+      >
+    </div>
+  </section>
+
+  <main class="max-w-[1280px] mx-auto px-4 md:px-6 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+      {
+        guides.map((g, i) => (
+          <a
+            href={g.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group rounded-[16px] bg-[#111318] border border-[#232730] p-6 hover:border-[#2D3340] transition-colors flex flex-col"
+          >
+            <div class="flex items-start justify-between gap-4 mb-3">
+              <span class="font-mono text-[11px] tracking-[0.1em] px-2.5 py-1 rounded-full bg-[#0D0F13] border border-[#232730] text-[#8B92A8]">
+                {String(i + 1).padStart(2, "0")} — {g.tag}
+              </span>
+              <span class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
+                →
+              </span>
+            </div>
+            <h3 class="font-[--font-display] font-semibold text-[17px] leading-tight tracking-[-0.01em] text-white group-hover:text-[#BFFF00] transition-colors">
+              {t(g.title as any)}
+            </h3>
+            <p class="mt-2 text-[13px] leading-relaxed text-[#8B92A8] flex-grow">
+              {t(g.description as any)}
+            </p>
+            <div class="mt-4 font-mono text-[11px] tracking-[0.08em] text-[#61697E] uppercase flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#BFFF00]" />{" "}
+              {t("guides.read_guide")}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>

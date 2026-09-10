@@ -2,6 +2,15 @@ packages:
   - .
 
 overrides:
+  # Prototype write / DoS vía browserslist-stats.json (<= 4.28.6, parcheado en 4.28.7)
+  browserslist: "^4.28.7"
+  # Resto de avisos de `pnpm audit`
+  postcss: "^8.5.23"
+  svgo: "^4.1.0"
+  smol-toml: "^1.7.1"
+  # Acotados por major: `>=` se saltaría a js-yaml 5.x / @babel/core 8.x
+  js-yaml@^4.0.0: "^4.3.2"
+  "@babel/core@^7.0.0": "^7.29.6"
   path-to-regexp: ">=8.4.2"
   esbuild: ">=0.28.0"
   devalue: ">=5.8.1"

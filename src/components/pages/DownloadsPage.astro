@@ -1,0 +1,383 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { languageList } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: keyof typeof languageList;
+}
+
+const { lang } = Astro.props;
+const currentLang = lang;
+const t = useTranslations(lang);
+
+const latestVersions = [
+  {
+    title: t("downloads.version3.name"),
+    buildInfo: t("downloads.version3.build_info"),
+    updated: "13-11-2025",
+    badges: ["x64 UEFI", t("downloads.badge.stable")],
+    accent: "lime",
+    features: [
+      t("downloads.features.iso_size_5gb"),
+      t("downloads.features.all_bloatware_removed"),
+      t("downloads.features.debloated_optimized"),
+      t("downloads.features.full_updatable_build"),
+      t("downloads.features.additional_language_support"),
+      t("downloads.features.optional_features_support"),
+      t("downloads.features.improvements_optimizations"),
+      t("downloads.features.no_preinstalled_uwp_apps"),
+      t("downloads.features.winutil_installer"),
+      t("downloads.features.winutil_features"),
+      t("downloads.features.winutil_optimizations"),
+      t("downloads.features_no_internet"),
+      t("downloads.features_telemetry"),
+    ],
+    link: "https://drive.google.com/file/d/1mSNcDq_TYFdYzCXYURqgeBhK1kE6YM4D/view?usp=sharing",
+    linkText: t("downloads.download_button"),
+    meta: "5.0 GB · SHA256 verify",
+    highlight: true,
+  },
+  {
+    title: t("downloads.latest_version.name"),
+    buildInfo: t("downloads.latest_version.build_info"),
+    updated: "07-02-2025",
+    badges: ["x64 UEFI", t("downloads.badge.stable")],
+    accent: "violet",
+    features: [
+      t("downloads.features.iso_size"),
+      t("downloads.features.debloated_optimized"),
+      t("downloads.features.full_updatable_build"),
+      t("downloads.features.automatic_updates_paused"),
+      t("downloads.features.intel_rst_drivers"),
+      t("downloads.features.extreme_performance"),
+      t("downloads.features.uwp_apps_support"),
+      t("downloads.features.additional_language_support"),
+      t("downloads.features.optional_features_support"),
+      t("downloads.features.improvements_optimizations"),
+      t("downloads.features.no_preinstalled_uwp_apps"),
+      t("downloads.features_no_internet"),
+      t("downloads.features_telemetry"),
+      t("downloads.features.ms_store_installer_included"),
+    ],
+    link: "https://www.mediafire.com/file_premium/mfmqqd8b218eozc/CodeXtremeOS11_24H2.iso/file",
+    linkText: t("downloads.download_button"),
+    meta: "3.6 GB · Intel RST",
+  },
+  {
+    title: t("downloads.version2.name"),
+    buildInfo: t("downloads.version2.build_info"),
+    updated: "07-02-2025",
+    badges: ["x64 UEFI", t("downloads.badge.stable")],
+    accent: "cyan",
+    features: [
+      t("downloads.features.installed_size_4gb"),
+      t("downloads.features.debloated_optimized"),
+      t("downloads.features.full_updatable_build"),
+      t("downloads.features.extreme_performance"),
+      t("downloads.features.uwp_apps_support"),
+      t("downloads.features.additional_language_support"),
+      t("downloads.features.optional_features_support"),
+      t("downloads.features.improvements_optimizations"),
+      t("downloads.features.no_preinstalled_uwp_apps"),
+      t("downloads.features_no_internet"),
+      t("downloads.features_telemetry"),
+    ],
+    link: "https://www.mediafire.com/file_premium/6txytyd1iu5syr3/CodeXtremeOS11_23H2.iso/file",
+    linkText: t("downloads.download_button"),
+    meta: "4.8 GB · 23H2",
+  },
+];
+
+const previousVersions = [
+  {
+    title: t("downloads.version1.name"),
+    buildInfo: t("downloads.version1.build_info"),
+    updated: "27-05-2025",
+    badges: [
+      "x64 UEFI",
+      t("downloads.badge.stable"),
+      t("downloads.badge.limited_support"),
+    ],
+    accent: "muted",
+    features: [
+      t("downloads.features.installed_size_3gb"),
+      t("downloads.features.debloated_optimized"),
+      t("downloads.features.full_updatable_build"),
+      t("downloads.features.automatic_updates_paused"),
+      t("downloads.features.intel_rst_drivers"),
+      t("downloads.features.extreme_performance"),
+      t("downloads.features.uwp_apps_support"),
+      t("downloads.features.additional_language_support"),
+      t("downloads.features.optional_features_support"),
+      t("downloads.features.improvements_optimizations"),
+      t("downloads.features.no_preinstalled_uwp_apps"),
+      t("downloads.features_no_internet"),
+      t("downloads.features_telemetry"),
+      t("downloads.features.ms_store_installer_included"),
+    ],
+    link: "https://www.mediafire.com/file_premium/mho2gzlbaeo4n89/CodeXtremeOS10_22H2.iso/file",
+    linkText: t("downloads.download_button"),
+    meta: "3.8 GB · 22H2 Legacy",
+  },
+];
+---
+
+<BaseLayout title={t("nav.download") + " — CodeXtremeOS"}>
+  <!-- Hero bench -->
+  <section class="max-w-[1280px] mx-auto px-4 md:px-6 pt-8 md:pt-10">
+    <div
+      class="rounded-[20px] bg-[#111318] border border-[#232730] overflow-hidden"
+    >
+      <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-0">
+        <div class="p-6 md:p-10">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-[#232730] bg-[#0D0F13] px-3 py-1.5 mb-5"
+          >
+            <span class="w-2 h-2 rounded-full bg-[#BFFF00]"></span>
+            <span
+              class="font-mono text-[11px] tracking-[0.1em] text-[#8B92A8] uppercase"
+            >
+              {t("downloads.eyebrow")}</span
+            >
+          </div>
+          <h1
+            class="font-[--font-display] font-bold text-[36px] md:text-[48px] tracking-[-0.03em] leading-[0.9] text-white"
+          >
+            {t("nav.download")}
+          </h1>
+          <p
+            class="mt-4 text-[16px] leading-relaxed text-[#8B92A8] max-w-[52ch]"
+          >
+            {t("downloads.hero_description")}
+            {t("downloads.hero_sub")}
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2 font-mono text-[11px]">
+            <span
+              class="px-3 py-1.5 rounded-full bg-[#BFFF00] text-black font-semibold"
+              >{t("downloads.recommended")}</span
+            >
+            <span
+              class="px-3 py-1.5 rounded-full bg-[#0D0F13] border border-[#232730] text-[#8B92A8]"
+              >5 GB · 4.8 GB · 3.6 GB · 3.8 GB</span
+            >
+          </div>
+        </div>
+        <div
+          class="p-6 md:p-8 bg-[#0D0F13] border-t lg:border-t-0 lg:border-l border-[#232730] flex flex-col justify-center"
+        >
+          <div class="rounded-[14px] bg-[#111318] border border-[#232730] p-4">
+            <div
+              class="font-mono text-[11px] tracking-[0.1em] text-[#61697E] uppercase mb-3"
+            >
+              {t("downloads.rack_status")}
+            </div>
+            <div class="space-y-2.5 font-mono text-[12px]">
+              <div class="flex justify-between">
+                <span class="text-[#8B92A8]">25H2 — 13-11-2025</span><span
+                  class="text-[#BFFF00]">● live</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#8B92A8]">24H2 — 07-02-2025</span><span
+                  class="text-[#61697E]">stable</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#8B92A8]">23H2 — 07-02-2025</span><span
+                  class="text-[#61697E]">stable</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#8B92A8]">10 22H2 — 27-05-2025</span><span
+                  class="text-[#FFB020]">legacy</span>
+              </div>
+            </div>
+            <div class="mt-4 h-px bg-[#232730]"></div>
+            <p class="mt-3 text-[12px] leading-relaxed text-[#61697E]">
+              {t("downloads.verify_note")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NTLite workshop notice -->
+  <section class="max-w-[1280px] mx-auto px-4 md:px-6 mt-6">
+    <div
+      class="rounded-[16px] border border-[#FFB020]/20 bg-[#FFB020]/[0.06] px-5 py-4 flex flex-wrap gap-3 items-center justify-between"
+    >
+      <p class="text-[13px] leading-relaxed text-[#8B92A8]">
+        <b class="text-[#FFB020]">{t("downloads.announcement.title")}</b>
+        {t("downloads.announcement.full_text")} · <b class="text-white"
+          >{t("downloads.announcement.security_title")}</b
+        >
+        {t("downloads.announcement.recommendation")}
+      </p>
+      <div class="flex gap-2 shrink-0">
+        <a
+          href="https://www.ntlite.com/community/index.php"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center h-8 px-4 rounded-full bg-[#111318] border border-[#232730] text-[12px] font-medium leading-none text-white hover:border-[#FFB020]/30 transition-colors"
+          >{t("downloads.announcement.official_guides")}</a
+        >
+        <a
+          href={getRelativeLocaleUrl(currentLang, "guias")}
+          class="inline-flex items-center justify-center h-8 px-4 rounded-full bg-[#FFB020] text-black text-[12px] font-semibold leading-none"
+          >{t("nav.guides")}</a
+        >
+      </div>
+    </div>
+    <p class="mt-3 text-center font-mono text-[11px] text-[#61697E]">
+      {t("downloads.announcement.custom_tip")}
+    </p>
+  </section>
+
+  <!-- Rack grid -->
+  <main class="max-w-[1280px] mx-auto px-4 md:px-6 py-8">
+    <div class="flex items-center justify-between mb-6">
+      <h2
+        class="font-[--font-display] font-semibold text-[22px] tracking-[-0.02em] text-white"
+      >
+        {t("downloads.11_versions.title")}
+      </h2>
+      <span
+        class="font-mono text-[11px] tracking-[0.12em] text-[#61697E] uppercase"
+        >Rack A — Latest</span
+      >
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {
+        latestVersions.map((v) => (
+          <div
+            class={`relative rounded-[16px] border overflow-hidden flex flex-col ${v.highlight ? "bg-[#BFFF00] border-[#BFFF00] text-black" : "bg-[#111318] border-[#232730] text-white"}`}
+          >
+            {v.highlight && (
+              <div class="absolute top-3 right-3 font-mono text-[10px] tracking-[0.1em] font-bold bg-black text-[#BFFF00] px-2 py-1 rounded-full">
+                {t("downloads.recommended_badge")}
+              </div>
+            )}
+            <div class="p-6 flex flex-col h-full">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class={`w-9 h-9 rounded-[10px] flex items-center justify-center text-[14px] font-mono font-bold border ${v.highlight ? "bg-black text-[#BFFF00] border-black" : "bg-[#0D0F13] border-[#232730] text-white"}`}
+                >
+                  CX
+                </div>
+                <div
+                  class={`font-mono text-[11px] px-2 py-1 rounded-full border ${v.highlight ? "bg-black/10 border-black/10 text-black" : "bg-[#0D0F13] border-[#232730] text-[#8B92A8]"}`}
+                >
+                  {v.meta}
+                </div>
+              </div>
+              <h3
+                class={`font-[--font-display] font-semibold text-[18px] leading-tight tracking-[-0.01em] ${v.highlight ? "text-black" : "text-white"}`}
+              >
+                {v.title}
+              </h3>
+              <p
+                class={`mt-1 font-mono text-[11px] ${v.highlight ? "text-black/60" : "text-[#61697E]"}`}
+              >
+                {v.buildInfo} · {v.updated}
+              </p>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {v.badges.map((b) => (
+                  <span
+                    class={`font-mono text-[10px] tracking-[0.06em] px-2 py-1 rounded-full border font-medium ${v.highlight ? "bg-black text-[#BFFF00] border-black" : "bg-[#0D0F13] border-[#232730] text-[#8B92A8]"}`}
+                  >
+                    {b}
+                  </span>
+                ))}
+              </div>
+              <ul class="mt-5 space-y-1.5 flex-grow">
+                {v.features.slice(0, 6).map((f) => (
+                  <li
+                    class={`flex gap-2 text-[12px] leading-relaxed ${v.highlight ? "text-black/80" : "text-[#8B92A8]"}`}
+                  >
+                    <span class={v.highlight ? "text-black" : "text-[#BFFF00]"}>
+                      —
+                    </span>{" "}
+                    {f}
+                  </li>
+                ))}
+                {v.features.length > 6 && (
+                  <li
+                    class={`font-mono text-[11px] pl-4 ${v.highlight ? "text-black/50" : "text-[#61697E]"}`}
+                  >
+                    + {v.features.length - 6} {t("downloads.more")}
+                  </li>
+                )}
+              </ul>
+              <a
+                href={v.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`mt-6 inline-flex items-center justify-center gap-2 h-10 rounded-full text-[13px] font-semibold transition-colors ${v.highlight ? "bg-black text-[#BFFF00] hover:bg-[#111318]" : "bg-white text-black hover:bg-[#EFEFEF]"}`}
+              >
+                {v.linkText} <span>→</span>
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex items-center justify-between mt-12 mb-6">
+      <h2
+        class="font-[--font-display] font-semibold text-[22px] tracking-[-0.02em] text-white"
+      >
+        {t("downloads.previous_versions.title")}
+      </h2>
+      <span
+        class="font-mono text-[11px] tracking-[0.12em] text-[#61697E] uppercase"
+        >Rack B — Legacy</span
+      >
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {
+        previousVersions.map((v) => (
+          <div class="rounded-[16px] bg-[#111318] border border-[#232730] p-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-[10px] bg-[#0D0F13] border border-[#232730] flex items-center justify-center text-[14px] font-mono font-bold text-white">
+                CX
+              </div>
+              <div class="font-mono text-[11px] px-2 py-1 rounded-full bg-[#0D0F13] border border-[#232730] text-[#8B92A8]">
+                {v.meta}
+              </div>
+            </div>
+            <h3 class="font-[--font-display] font-semibold text-[18px] tracking-[-0.01em] text-white">
+              {v.title}
+            </h3>
+            <p class="mt-1 font-mono text-[11px] text-[#61697E]">
+              {v.buildInfo} · {v.updated}
+            </p>
+            <div class="mt-3 flex flex-wrap gap-1.5">
+              {v.badges.map((b) => (
+                <span class="font-mono text-[10px] px-2 py-1 rounded-full bg-[#0D0F13] border border-[#232730] text-[#8B92A8]">
+                  {b}
+                </span>
+              ))}
+            </div>
+            <ul class="mt-5 space-y-1.5 flex-grow">
+              {v.features.slice(0, 6).map((f) => (
+                <li class="flex gap-2 text-[12px] leading-relaxed text-[#8B92A8]">
+                  <span class="text-[#61697E]">—</span> {f}
+                </li>
+              ))}
+            </ul>
+            <a
+              href={v.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center justify-center gap-2 h-10 rounded-full bg-white text-black text-[13px] font-semibold hover:bg-[#EFEFEF] transition-colors"
+            >
+              {v.linkText} <span>→</span>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>
